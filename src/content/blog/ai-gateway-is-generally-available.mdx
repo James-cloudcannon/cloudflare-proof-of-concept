@@ -1,0 +1,229 @@
+---
+date: "2024-05-22"
+title: "AI Gateway is generally available: a unified interface for managing and scaling your generative AI workloads"
+excerpt: "AI Gateway is an AI ops platform that provides speed, reliability, and observability for your AI applications. With a single line of code, you can unlock powerful features including rate limiting, custom caching, real-time logs, and aggregated analytics across multiple providers..."
+tags:
+  - "Developer Platform"
+  - "Developers"
+  - "Open Source"
+  - "Workers AI"
+  - "AI Gateway"
+  - "AI"
+author:
+  - name: "Kathy Liao"
+    avatar: "https://blog.cloudflare.com/cdn-cgi/image/format=auto,dpr=3,width=64,height=64/https://blog.cloudflare.com/content/images/2024/05/Screenshot-2024-05-16-at-2.01.08-PM.png"
+  - name: "Michelle Chen"
+    avatar: "https://blog.cloudflare.com/cdn-cgi/image/format=auto,dpr=3,width=64,height=64/https://blog.cloudflare.com/content/images/2023/08/Michelle-Chen-Headshot.jpg"
+  - name: "Phil Wittig"
+    avatar: "https://blog.cloudflare.com/cdn-cgi/image/format=auto,dpr=3,width=64,height=64/https://blog.cloudflare.com/content/images/2023/09/phil.jpeg"
+thumb_image_path: "https://blog.cloudflare.com/content/images/2024/05/image4-3.png"
+thumb_image_alt: "AI Gateway is generally available: a unified interface for managing and scaling your generative AI workloads."
+image: "https://blog.cloudflare.com/content/images/2024/05/image4-3.png"
+image_alt: "AI Gateway is generally available: a unified interface for managing and scaling your generative AI workloads."
+featured: true
+seo:
+  page_description: "AI Gateway provides a unified interface for managing and scaling generative AI workloads with features like rate limiting and real-time logs."
+  canonical_url: "https://blog.cloudflare.com/ai-gateway-is-generally-available"
+  featured_image: "https://blog.cloudflare.com/content/images/2024/05/image4-3.png"
+  featured_image_alt: "AI Gateway is generally available: a unified interface for managing and scaling your generative AI workloads."
+  author_twitter_handle: "cloudflare"
+  open_graph_type: "article"
+  no_index: false
+---
+
+![AI Gateway is generally available: a unified interface for managing and
+scaling your generative AI
+workloads.](https://blog.cloudflare.com/content/images/2024/05/image4-3.png)
+
+During Developer Week in April 2024, we announced General Availability of
+[Workers AI](https://blog.cloudflare.com/workers-ai-ga-huggingface-loras-
+python-support), and today, we are excited to announce that AI Gateway is
+Generally Available as well. Since its launch to beta [in September 2023
+during Birthday Week](https://blog.cloudflare.com/announcing-ai-gateway),
+we’ve proxied over 500 million requests and are now prepared for you to use it
+in production.
+
+AI Gateway is an AI ops platform that offers a unified interface for managing
+and scaling your generative AI workloads. At its core, it acts as a proxy
+between your service and your inference provider(s), regardless of where your
+model runs. With a single line of code, you can unlock a set of powerful
+features focused on performance, security, reliability, and observability –
+think of it as your [control
+plane](https://www.cloudflare.com/learning/network-layer/what-is-the-control-
+plane/) for your AI ops. And this is just the beginning – we have a roadmap
+full of exciting features planned for the near future, making AI Gateway the
+tool for any organization looking to get more out of their AI workloads.
+
+![architecture diagram illustrating the setup of AI Gateway as a forward
+proxy](https://blog.cloudflare.com/content/images/2024/05/image6-1.png)
+
+## Why add a proxy and why Cloudflare?
+
+The AI space moves fast, and it seems like every day there is a new model,
+provider, or framework. Given this high rate of change, it’s hard to keep
+track, especially if you’re using more than one model or provider. And that’s
+one of the driving factors behind launching AI Gateway – we want to provide
+you with a single consistent control plane for all your models and tools, even
+if they change tomorrow, and then again the day after that.
+
+We've talked to a lot of developers and organizations building AI
+applications, and one thing is clear: they want more observability, control,
+and tooling around their AI ops. This is something many of the AI providers
+are lacking as they are deeply focused on model development and less so on
+platform features.
+
+Why choose Cloudflare for your AI Gateway? Well, in some ways, it feels like a
+natural fit. We've spent the last 10+ years helping build a better Internet by
+running one of the largest global networks, helping customers around the world
+with performance, reliability, and security – Cloudflare is used as a [reverse
+proxy](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/) by
+nearly 20% of all websites. With our expertise, it felt like a natural
+progression – change one line of code, and we can help with observability,
+reliability, and control for your AI applications – all in one control plane –
+so that you can get back to building.
+
+Here is that one line code change using the OpenAI JS SDK. And check out [our
+docs](https://developers.cloudflare.com/ai-gateway/providers/) to reference
+other providers, SDKs, and languages.
+
+```
+    import OpenAI from 'openai';
+
+    const openai = new OpenAI({
+    apiKey: 'my api key', // defaults to process.env["OPENAI_API_KEY"]
+    	baseURL: "https://gateway.ai.cloudflare.com/v1/{account_id}/{gateway_slug}/openai"
+    });
+```
+
+## What’s included today?
+
+After talking to customers, it was clear that we needed to focus on some
+foundational features before moving onto some of the more advanced ones. While
+we're really excited about what’s to come, here are the key features available
+in GA today:
+
+**Analytics** : Aggregate metrics from across multiple providers. See traffic
+patterns and usage including the number of requests, tokens, and costs over
+time.
+
+![](https://blog.cloudflare.com/content/images/2024/05/pasted-image-0--
+10-.png)
+
+**Real-time logs:** Gain insight into requests and errors as you build.
+
+![Real-time logs from running three requests to
+Cohere](https://blog.cloudflare.com/content/images/2024/05/image8-1.png)
+
+**Caching:** Enable custom caching rules and use Cloudflare’s cache for repeat
+requests instead of hitting the original model provider API, helping you save
+on cost and latency.
+
+![Set up rules for caching
+requests](https://blog.cloudflare.com/content/images/2024/05/image1-10.png)
+
+**Rate limiting:** Control how your application scales by limiting the number
+of requests your application receives to control costs or prevent abuse.
+
+![Set up rules for rate limiting
+traffic](https://blog.cloudflare.com/content/images/2024/05/image5-9.png)
+
+**Support for your favorite providers:** AI Gateway now natively supports
+Workers AI plus 10 of the most popular providers, including [Groq and
+Cohere](https://x.com/CloudflareDev/status/1791204770394648901) as of mid-May 2024.
+
+![Real time logs from three LLM providers - Cohere, Groq, and
+OpenAI](https://blog.cloudflare.com/content/images/2024/05/image2-10.png)
+
+**Universal endpoint:** In case of errors, improve resilience by defining
+[request fallbacks](https://developers.cloudflare.com/ai-
+gateway/configuration/fallbacks/) to another model or inference provider.
+
+```
+
+    curl https://gateway.ai.cloudflare.com/v1/{account_id}/{gateway_slug} -X POST \
+      --header 'Content-Type: application/json' \
+      --data '[
+      {
+        "provider": "workers-ai",
+        "endpoint": "@cf/meta/llama-2-7b-chat-int8",
+        "headers": {
+          "Authorization": "Bearer {cloudflare_token}",
+          "Content-Type": "application/json"
+        },
+        "query": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a friendly assistant"
+            },
+            {
+              "role": "user",
+              "content": "What is Cloudflare?"
+            }
+          ]
+        }
+      },
+      {
+        "provider": "openai",
+        "endpoint": "chat/completions",
+        "headers": {
+          "Authorization": "Bearer {open_ai_token}",
+          "Content-Type": "application/json"
+        },
+        "query": {
+          "model": "gpt-3.5-turbo",
+          "stream": true,
+          "messages": [
+            {
+              "role": "user",
+              "content": "What is Cloudflare?"
+            }
+          ]
+        }
+      }
+    ]'
+```
+
+## What’s coming up?
+
+We've gotten a lot of feedback from developers, and there are some obvious
+things on the horizon such as persistent logs and custom metadata –
+foundational features that will help unlock the real magic down the road.
+
+But let's take a step back for a moment and share our vision. At Cloudflare,
+we believe our platform is much more powerful as a unified whole than as a
+collection of individual parts. This mindset applied to our AI products means
+that they should be easy to use, combine, and run in harmony.
+
+Let's imagine the following journey. You initially onboard onto Workers AI to
+run inference with the latest open source models. Next, you enable AI Gateway
+to gain better visibility and control, and start storing persistent logs. Then
+you want to start tuning your inference results, so you leverage your
+persistent logs, our prompt management tools, and our built in eval
+functionality. Now you're making analytical decisions to improve your
+inference results. With each data driven improvement, you want more. So you
+implement our feedback API which helps annotate inputs/outputs, in essence
+building a structured data set. At this point, you are one step away from a
+one-click fine tune that can be deployed instantly to our global network, and
+it doesn't stop there. As you continue to collect logs and feedback, you can
+continuously rebuild your fine tune adapters in order to deliver the best
+results to your end users.
+
+This is all just an aspirational story at this point, but this is how we
+envision the future of AI Gateway and our AI suite as a whole. You should be
+able to start with the most basic setup and gradually progress into more
+advanced workflows, all without leaving [Cloudflare’s AI
+platform](https://www.cloudflare.com/ai-solution/). In the end, it might not
+look exactly as described above, but you can be sure that we are committed to
+providing the best AI ops tools to help make Cloudflare the best place for AI.
+
+## How do I get started?
+
+AI Gateway is available to use today on all plans. If you haven’t yet used AI
+Gateway, check out our [developer
+documentation](https://developers.cloudflare.com/ai-gateway/) and get started
+now. AI Gateway’s core features available today are offered for free, and all
+it takes is a Cloudflare account and one line of code to get started. In the
+future, more premium features, such as persistent logging and secrets
+management will be available subject to fees. If you have any questions, reach
+out on our [Discord channel](http://discord.cloudflare.com).

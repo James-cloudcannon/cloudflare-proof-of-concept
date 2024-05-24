@@ -1,0 +1,215 @@
+---
+date: "2024-08-05"
+title: Using Fortran on Cloudflare Workers
+excerpt: Work on LLVM has enabled Fortran to compile to WebAssembly. So, today, we’re writing about running Fortran code on Cloudflare Workers...
+tags:
+  - "Fortran"
+  - "Developer Platform"
+  - "Developers"
+  - "Cloudflare Workers"
+author:
+  - name: "John Grahan-Cumming"
+    avatar: "https://blog.cloudflare.com/cdn-cgi/image/format=auto,dpr=3,width=64,height=64/https://blog.cloudflare.com/content/images/2017/03/url-2.jpg"
+  - name: "Sven Sauleau"
+    avatar: "https://blog.cloudflare.com/cdn-cgi/image/format=auto,dpr=3,width=64,height=64/https://blog-cloudflare-com-assets.storage.googleapis.com/2020/09/7cBY6-H7_400x400--1-.jpg"
+thumb_image_path: https://blog.cloudflare.com/content/images/2024/05/image2.png
+thumb_image_alt: Fortran logo
+image: https://blog.cloudflare.com/content/images/2024/05/image2.png
+image_alt: Using Fortran on Cloudflare Workers
+featured: false
+seo:
+  page_description: ""
+  canonical_url: ""
+  featured_image: ""
+  featured_image_alt: ""
+  author_twitter_handle: ""
+  open_graph_type: article
+  no_index: false
+---
+
+![Using Fortran on Cloudflare
+Workers](https://blog.cloudflare.com/content/images/2024/05/image2.png)
+
+In April 2020, we blogged about how to get [COBOL running on Cloudflare
+Workers](https://blog.cloudflare.com/cloudflare-workers-now-support-cobol) by
+compiling to WebAssembly. The ecosystem around WebAssembly has grown
+significantly since then, and it has become a solid foundation for all types
+of projects, be they client-side or server-side.
+
+As WebAssembly support has grown, more and more languages are able to compile
+to WebAssembly for execution on servers and in browsers. As Cloudflare Workers
+uses the V8 engine and supports WebAssembly natively, we’re able to support
+languages that compile to WebAssembly on the platform.
+
+Recently, work on LLVM has enabled Fortran to compile to WebAssembly. So,
+today, we’re writing about running Fortran code on Cloudflare Workers.
+
+Before we dive into how to do this, here’s a little demonstration of number
+recognition in Fortran. Draw a number from 0 to 9 and Fortran code running
+somewhere on Cloudflare’s network will predict the number you drew.
+
+This is taken from the wonderful [Fortran on
+WebAssembly](https://gws.phd/posts/fortran_wasm/) post but instead of running
+client-side, the Fortran code is running on Cloudflare Workers. Read on to
+find out how you can use Fortran on Cloudflare Workers and how that
+demonstration works.
+
+### Wait, Fortran? No one uses that!
+
+Not so fast! Or rather, actually pretty darn fast if you’re doing a lot of
+numerical programming or have scientific data to work with. Fortran
+[(originally FORmula
+TRANslator)](https://en.wikipedia.org/wiki/Fortran#Naming) is very well suited
+for scientific workloads because of its native functionality for things like
+arithmetic and handling large arrays and matrices.
+
+If you look at the [ranking](https://en.wikipedia.org/wiki/TOP500) of the
+fastest supercomputers in the world you’ll discover that the measurement of
+“fast” is based on these supercomputers running a piece of software called
+[LINPACK](https://en.wikipedia.org/wiki/LINPACK) that was originally written
+in Fortran. LINPACK is designed to help with problems solvable using linear
+algebra.
+
+The [LINPACK benchmarks](https://en.wikipedia.org/wiki/LINPACK_benchmarks) use
+LINPACK to solve an n x n system of linear equations using matrix operations
+and, in doing so, determine how fast supercomputers are. The code is available
+in [Fortran](https://www.netlib.org/benchmark/linpackd),
+[C](https://www.netlib.org/benchmark/linpackc) and
+[Java](https://www.netlib.org/benchmark/linpackjava/).
+
+A related Fortran package, [BLAS](https://www.netlib.org/blas/), also does
+linear algebra and forms the basis of the number identifying code above. But
+other Fortran packages are still relevant. Back in 2017, NASA ran a
+[competition](https://www.bbc.com/news/technology-39803425) to make FUN3D
+(used to perform calculations of airflow over simulated aircraft).
+[FUN3D](https://fun3d.larc.nasa.gov/) is written in Fortran.
+
+So, although Fortran (or at the time FORTRAN) first came to life in 1957, it’s
+alive and well and being used widely for scientific applications (there’s even
+[Fortran for CUDA](https://developer.nvidia.com/cuda-fortran)). One particular
+application left Earth 20 years after Fortran was born: Voyager. The Voyager
+probes use a combination of [assembly language and
+Fortran](https://www.popularmechanics.com/space/a17991/voyager-1-voyager-2-retiring-
+engineer/) to keep chugging along.
+
+But back in our solar system, and back on Region: Earth, you can now use
+Fortran on Cloudflare Workers. Here’s how.
+
+### How to get your Fortran code running on Cloudflare Workers
+
+To make it easy to run your Fortran code on Cloudflare Workers, we created a
+tool called [Fortiche](https://github.com/cloudflare/fortiche) (translates to
+smart in French). It uses [Flang](https://flang.llvm.org/docs/) and
+[Emscripten](https://emscripten.org) under the hood.
+
+[Flang](https://flang.llvm.org/docs/) is a frontend in
+[LLVM](https://en.wikipedia.org/wiki/LLVM) and, if you read the [Fortran on
+WebAssembly](https://gws.phd/posts/fortran_wasm/) blog post, we currently have
+to patch [LLVM](https://en.wikipedia.org/wiki/LLVM) to work around a few
+issues.
+
+[Emscripten](https://emscripten.org) is used to compile
+[LLVM](https://en.wikipedia.org/wiki/LLVM) output and produce code that is
+compatible with Cloudflare Workers.
+
+This is all packaged in the [Fortiche](https://github.com/cloudflare/fortiche)
+Docker image. Let’s see a simple example.
+
+add.f90:
+
+    SUBROUTINE add(a, b, res)
+        INTEGER, INTENT(IN) :: a, b
+        INTEGER, INTENT(OUT) :: res
+
+        res = a + b
+    END
+
+Here we defined a subroutine called add that takes `a` and `b`, sums them
+together and places the result in `res`.
+
+Compile with [Fortiche](https://github.com/cloudflare/fortiche):
+
+    docker run -v $PWD:/input -v $PWD/output:/output xtuc/fortiche --export-func=add add.f90
+
+Passing `--export-func=add` to
+[Fortiche](https://github.com/cloudflare/fortiche) makes the Fortran `add`
+subroutine available to JavaScript.
+
+The output folder contains the compiled WebAssembly module and JavaScript from
+[Emscripten](https://emscripten.org), and a JavaScript endpoint generated by
+[Fortiche](https://github.com/cloudflare/fortiche):
+
+    $ ls -lh ./output
+    total 84K
+    -rw-r--r-- 1 root root 392 avril 22 12:00 index.mjs
+    -rw-r--r-- 1 root root 27K avril 22 12:00 out.mjs
+    -rwxr-xr-x 1 root root 49K avril 22 12:00 out.wasm
+
+And finally the Cloudflare Worker:
+
+    // Import what Fortiche generated
+    import {load} from "../output/index.mjs"
+
+    export default {
+        async fetch(request: Request): Promise<Response> {
+            // Load the Fortran program
+            const program = await load();
+
+            // Allocate space in memory for the arguments and result
+            const aPtr = program.malloc(4);
+            const bPtr = program.malloc(4);
+            const outPtr = program.malloc(4);
+
+            // Set argument values
+            program.HEAP32[aPtr / 4] = 123;
+            program.HEAP32[bPtr / 4] = 321;
+
+            // Run the Fortran add subroutine
+            program.add(aPtr, bPtr, outPtr);
+
+            // Read the result
+            const res = program.HEAP32[outPtr / 4];
+
+            // Free everything
+            program.free(aPtr);
+            program.free(bPtr);
+            program.free(outPtr);
+
+            return Response.json({ res });
+        },
+    };
+
+Interestingly, the values we pass to Fortran are all pointers, therefore we
+have to allocate space for each argument and result (the Fortran integer type
+is four bytes wide), and pass the pointers to the `add` subroutine.
+
+Running the Worker gives us the right answer:
+
+    $ curl https://fortran-add.cfdemos.workers.dev
+
+    {"res":444}
+
+You can find the [full example
+here](https://github.com/cloudflare/fortiche/tree/main/examples/add).
+
+### Handwritten digit classifier
+
+![](https://blog.cloudflare.com/content/images/2024/05/image1-2.png)
+
+This example is taken from <https://gws.phd/posts/fortran_wasm/#mnist>. It
+relies on the [BLAS](https://www.netlib.org/blas/) library, which is available
+in Fortiche with the flag: `--with-BLAS-3-12-0`.
+
+Note that the [LAPACK](https://en.wikipedia.org/wiki/LAPACK) library is also
+available in [Fortiche](https://github.com/cloudflare/fortiche) with the flag:
+`--with-LAPACK-3-12-0`.
+
+You can try it below:
+
+And you can access the [source code
+here](https://github.com/cloudflare/fortiche/tree/main/examples/handwritten-
+digit-classifier).
+
+Let us know what you write using Fortran and Cloudflare Workers!
+
+`END`

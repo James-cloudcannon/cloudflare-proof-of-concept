@@ -16,12 +16,19 @@ const blogCollection = defineCollection({
   schema: z.object({
     date: z.string().or(z.date()),
     title: z.string(),
+    excerpt: z.string(),
     tags: z.array(z.string()),
-    author: z.string(),
+    author: z.array(
+      z.object({
+        name: z.string(),
+        avatar: z.string(),
+      })
+    ),
     thumb_image_path: z.string().optional(),
     thumb_image_alt: z.string().optional(),
     image: z.string().optional(),
     image_alt: z.string().optional(),
+    featured: z.boolean(),
     seo: seoSchema,
   }),
 });

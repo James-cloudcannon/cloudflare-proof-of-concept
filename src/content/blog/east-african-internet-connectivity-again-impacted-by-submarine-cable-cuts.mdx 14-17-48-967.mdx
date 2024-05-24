@@ -1,0 +1,171 @@
+---
+date: "2024-05-14"
+title: East African Internet connectivity again impacted by submarine cable cuts
+excerpt: On Sunday, May 12, issues with the EASSy and Seacom submarine cables again disrupted connectivity to East Africa, impacting a number of countries previously affected by a set of cable cuts that occurred nearly three months earlier...
+tags:
+  - "Cloudflare Radar"
+  - "Internet Traffic"
+  - "Outage"
+author:
+  - name: "David Belson"
+    avatar: "https://blog.cloudflare.com/cdn-cgi/image/format=auto,dpr=3,width=64,height=64/https://blog.cloudflare.com/content/images/2022/11/David-Belson.jpeg"
+thumb_image_path: https://blog.cloudflare.com/content/images/2024/05/image9.png
+thumb_image_alt: ""
+image: https://blog.cloudflare.com/content/images/2024/05/image9.png
+image_alt: Undersea cable failures cause Internet disruptions for multiple African countries
+featured: false
+seo:
+  page_description: ""
+  canonical_url: ""
+  featured_image: ""
+  featured_image_alt: ""
+  author_twitter_handle: ""
+  open_graph_type: article
+  no_index: false
+---
+
+4 min read
+
+![Undersea cable failures cause Internet disruptions for multiple African
+countries](https://blog.cloudflare.com/content/images/2024/05/image9.png)
+
+On Sunday, May 12, issues with the
+[ESSAy](https://www.submarinecablemap.com/submarine-cable/eastern-africa-
+submarine-system-eassy) and
+[Seacom](https://www.submarinecablemap.com/submarine-cable/seacomtata-tgn-
+eurasia) submarine cables again disrupted connectivity to East Africa,
+impacting a number of countries previously affected by a set of cable cuts
+that occurred nearly three months earlier.
+
+On February 24, three submarine cables that run through the Red Sea were
+damaged: the [Seacom/Tata cable](https://www.submarinecablemap.com/submarine-
+cable/seacomtata-tgn-eurasia), the [Asia Africa
+Europe-1](https://www.submarinecablemap.com/submarine-cable/asia-africa-
+europe-1-aae-1) (AAE-1), and the [Europe India
+Gateway](https://www.submarinecablemap.com/submarine-cable/europe-india-
+gateway-eig) (EIG). It is
+[believed](https://www.bloomberg.com/news/articles/2024-03-06/anchor-from-
+houthi-sunk-ship-likely-damaged-undersea-cables) that the cables were cut by
+the anchor of the [Rubymar](https://www.wired.com/story/houthi-internet-
+cables-ship-anchor-path/), a cargo ship that was damaged by a ballistic
+missile on February 18. These cable cuts
+[reportedly](https://www.wired.com/story/houthi-internet-cables-ship-anchor-
+path/#:~:text=impacted%20countries%20in%20East%20Africa) impacted countries in
+East Africa, including
+[Tanzania](https://radar.cloudflare.com/traffic/tz?dateStart=2024-02-22&dateEnd=2024-02-28),
+[Kenya](https://radar.cloudflare.com/traffic/ke?dateStart=2024-02-22&dateEnd=2024-02-28),
+[Uganda](https://radar.cloudflare.com/traffic/ug?dateStart=2024-02-22&dateEnd=2024-02-28),
+and
+[Mozambique](https://radar.cloudflare.com/traffic/mz?dateStart=2024-02-22&dateEnd=2024-02-28).
+As of this writing (May 13), [these cables remain
+unrepaired](https://www.bloomberg.com/news/articles/2024-05-07/repairs-to-
+damaged-red-sea-internet-cables-delayed-by-yemen-political-splits).
+
+Already suffering from reduced capacity due to the February cable cuts, these
+countries were impacted by a second set of cable cuts that occurred on Sunday,
+May 12. According to a [social media post from Ben
+Roberts](https://twitter.com/benliquidkenya/status/1789622798907843058), Group
+CTIO at Liquid Intelligent Technologies in Kenya, faults on the
+[EASSy](https://www.submarinecablemap.com/submarine-cable/eastern-africa-
+submarine-system-eassy) and
+[Seacom](https://www.submarinecablemap.com/submarine-cable/seacomtata-tgn-
+eurasia) cables again disrupted connectivity to East Africa, as he noted “
+_All sub sea capacity between East Africa and South Africa is down._ ” A [BBC
+article](https://www.bbc.com/news/articles/cprg0yn8q81o) citing Roberts stated
+that the EASSy cable had been cut approximately 45km (28 miles) north of the
+South African port city of Durban. A subsequent [press release issued by the
+Communications Authority of
+Kenya](https://twitter.com/CA_Kenya/status/1790022989913727121) stated that
+the cut had occurred at the Mtunzini teleport station (in South Africa). As
+seen in the map below, both the EASSy and Seacom cables land in Mtunzini.
+
+![](https://blog.cloudflare.com/content/images/2024/05/image7.png) _Map of
+African undersea cables, April 2024._ ‌ ‌ _Source:
+https://manypossibilities.net/african-undersea-cables/_
+
+## Impacts to country-level Internet traffic
+
+Cloudflare Radar saw traffic levels across a number of the impacted countries
+drop just before 11:00 local time (08:00 UTC). As seen in the graphs below,
+the magnitude of impact varied by country, with traffic initially dropping by
+10-25% in
+[Kenya](https://radar.cloudflare.com/traffic/ke?dateStart=2024-05-12),
+[Uganda](https://radar.cloudflare.com/traffic/ug?dateStart=2024-05-12),
+[Madagascar](https://radar.cloudflare.com/traffic/mg?dateStart=2024-05-12),
+and
+[Mozambique](https://radar.cloudflare.com/traffic/mz?dateStart=2024-05-12),
+while traffic in
+[Rwanda](https://radar.cloudflare.com/traffic/rw?dateStart=2024-05-12),
+[Malawi](https://radar.cloudflare.com/traffic/mw?dateStart=2024-05-12), and
+[Tanzania](https://radar.cloudflare.com/traffic/tz?dateStart=2024-05-12)
+dropped by one-third or more as compared to the previous week.
+
+In Kenya and Uganda, the overall impact appeared to be low, with traffic
+generally remaining just below expected levels in the day and a half following
+the cable faults. In the other countries, the overnight trough of the diurnal
+traffic patterns remained consistent with the previous week’s traffic levels,
+but otherwise traffic remains significantly lower than expected.
+
+![](https://blog.cloudflare.com/content/images/2024/05/image5-5.png)
+![](https://blog.cloudflare.com/content/images/2024/05/image3-2.png)
+![](https://blog.cloudflare.com/content/images/2024/05/image6.png)
+![](https://blog.cloudflare.com/content/images/2024/05/image2-6.png)
+![](https://blog.cloudflare.com/content/images/2024/05/image4-2.png)
+![](https://blog.cloudflare.com/content/images/2024/05/image8.png)
+![](https://blog.cloudflare.com/content/images/2024/05/image1-5.png)
+
+## The importance of redundancy
+
+In Kenya, the impact may have been nominal due to steps taken by providers
+like Safaricom and Airtel Kenya. In a May 12 social media post, [Safaricom
+noted](https://twitter.com/SafaricomPLC/status/1789672918437200266) “ _...We
+have since activated redundancy measures to minimise service interruption and
+keep you connected as we await the full restoration of the cable._ ” In a
+subsequent social media post on May 13, [Safaricom
+noted](https://twitter.com/SafaricomPLC/status/1789992420836307292/photo/1) “
+_Thanks to our redundancy plans and capacity investment across multiple
+undersea cables our services continue to be available, however some customers
+may experience slow connectivity and speeds._ ” Similarly, a social media post
+from [Airtel Kenya
+noted](https://twitter.com/AIRTEL_KE/status/1790097275970019693/photo/1) “
+_Following yesterday's undersea fiber cut that has impacted internet
+connectivity, we would like to update you that we have taken measures to
+improve your browsing experience through additional capacity enhancement._ ”
+
+Similarly, the previously referenced [press
+release](https://twitter.com/CA_Kenya/status/1790022989913727121/photo/1) from
+the Communications Authority of Kenya talked about actions being taken,
+stating “ _Meanwhile, the Authority has directed service providers to take
+proactive steps to secure alternative routes for their traffic and is
+monitoring the situation closely to ensure that incoming and outbound internet
+connectivity is available. The East Africa Marine System (TEAMS) cable, which
+has not been affected by the cut, is currently being utilised for local
+traffic flow while redundancy on the South Africa route has been activated to
+minimise the impact._ ”
+
+## What’s next?
+
+Once the necessary permits are secured and the cable faults are located,
+repairs can often be completed in several days. However, because cable repair
+ships are [something of a scarce
+resource](https://www.iscpc.org/information/cableships-of-the-world/?items=0),
+there is [often a delay](https://www.theverge.com/c/24070570/internet-cables-
+undersea-deep-repair-ships) to both engage a vessel and for it to travel to
+the area where the cable damage occurred, whether from its baseport or the
+location of a previous repair. However, in this case that delay may be
+comparatively short, as submarine cable industry observer [@philBE2
+predicts](https://twitter.com/philBE2/status/1790051184578871524) “ _Expecting
+the usual suspect,_[ _CS Leon
+Thevenin_](https://www.vesselfinder.com/vessels/details/8108676) _, now moored
+in Cape Town, to be swiftly mobilized for an expeditious repair mission…_ ”
+
+The Cloudflare Radar team will continue to monitor traffic recovery and the
+status of Internet connectivity in the impacted countries. We will share our
+observations on the [Cloudflare Radar Outage
+Center](https://radar.cloudflare.com/outage-center), via social media, and in
+posts on [blog.cloudflare.com](https://blog.cloudflare.com/tag/cloudflare-
+radar/). Follow us on social media at
+[@CloudflareRadar](https://twitter.com/CloudflareRadar) (X),
+<https://noc.social/@cloudflareradar> (Mastodon), and
+[radar.cloudflare.com](https://bsky.app/profile/radar.cloudflare.com)
+(Bluesky), or contact us via email.
