@@ -1,0 +1,58 @@
+.related-posts {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @media screen and (min-width: 60em) {
+        width: 50%;
+    }
+
+    &__date {
+        color: #92979b;
+        font-weight: 500;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__wrapper {
+        color: #36393a;
+
+        &__heading {
+            font-size: 1.25rem;
+            text-decoration: none;
+            font-weight: 500;
+
+            h2 {
+                font-size: 1.25rem;
+                margin: 1.5em 0 0.5em;
+                margin-top: 0.5rem;
+                font-weight: 500;
+            }
+        }
+
+        &__excerpt {
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
+        }
+
+        &__author {
+            color: #36393a;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        &__tags {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            column-gap: 0.25rem;
+            a {
+                color: #276d9b;
+                text-decoration: none;
+                font-weight: 200;
+                font-size: 0.875rem;
+            }
+        }
+    }
+}

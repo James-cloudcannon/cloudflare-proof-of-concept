@@ -22,6 +22,7 @@ const blogCollection = defineCollection({
       z.object({
         name: z.string(),
         avatar: z.string(),
+        social: z.string().optional(),
       })
     ),
     thumb_image_path: z.string().optional(),

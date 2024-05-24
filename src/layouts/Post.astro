@@ -1,8 +1,8 @@
 ---
-import Layout from './Layout.astro';
-import PostSummary from '../components/blog/summary';
-import { getCollection } from 'astro:content';
-import type { MarkdownLayoutProps } from 'astro';
+import Layout from "./Layout.astro";
+import RelatedPosts from "../components/blog/related-posts";
+import { getCollection } from "astro:content";
+import type { MarkdownLayoutProps } from "astro";
 
 type Props =
   | {
@@ -10,113 +10,187 @@ type Props =
       date: string;
       image: string;
       image_alt: string;
-      author: string;
+      author: Array<{ name: string; avatar: string; social?: string }>;
       body: string;
+      tags: string[];
     }
   | MarkdownLayoutProps<{
       title: string;
       date: string;
       image: string;
       image_alt: string;
-      author: string;
+      author: Array<{ name: string; avatar: string; social?: string }>;
+      tags: string[];
     }>;
 
 const props = Astro.props.frontmatter ?? Astro.props;
-const { title, date, image, image_alt, author } = props;
+const { title, date, image, image_alt, author, tags } = props;
 const content = Astro.props.body ?? Astro.props.rawContent();
-const wordCount = content.split(' ').length;
+const wordCount = content.split(" ").length;
 const readingTime = Math.floor(wordCount / 183);
 const dateObj = new Date(date);
-const authorDomain = 'https://simple-onion.cloudvent.net/profiles/';
-const authorSlug = author.toLowerCase().replace(/ /g, '-');
-const authorUrl = [authorDomain, authorSlug, '/'].join('');
+const slug = Astro.url.pathname.replace("/blog/", "");
 
-const posts = await getCollection('blog');
+const formattedDate = dateObj.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+
+const posts = await getCollection("blog");
+
+const relatedPosts = posts
+  .filter(
+    (post) =>
+      post.slug !== slug && post.data.tags.some((tag) => tags.includes(tag))
+  )
+  .map((post) => {
+    post.data.featured = false;
+    return post;
+  });
 ---
 
 <Layout {...props}>
-  <main class="py-[48px] md:py-[96px] px-8">
-    <article class="max-w-screen-md mx-auto">
-      <img class="rounded-lg mb-4" src={image} alt={image_alt} />
-      <h1
-        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold sm:text-center">
-        {title}
-      </h1>
-      <ul
-        class="flex flex-col justify-between sm:flex-row sm:justify-center sm:gap-5 py-5 font-light text-sm">
-        <li class="post-data-list-item">
-          {author}
-        </li>
-        <li class="post-data-list-item">
-          <p>
-            {
-              dateObj.toLocaleDateString(undefined, {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })
-            }
-          </p>
-        </li>
-        <div class="flex gap-3">
-          <li class="post-data-list-item post-size">
-            <p>{wordCount}<span> words</span></p>
-          </li>
-          <li>
-            <p>{readingTime}<span> minutes</span></p>
-          </li>
-        </div>
+  <main class="blog-post">
+    <article class="blog-post__article">
+      <h1 class="blog-post__title">{title}</h1>
+      <li class="blog-post__date">
+        <p>{formattedDate}</p>
+      </li>
+      <ul class="blog-post__author">
+        {
+          author.map((authorName) => (
+            <li class="blog-post__author__item" key={authorName.name}>
+              <a
+                href={`/author/${authorName.name.toLowerCase().replace(" ", "-")}`}
+                class="blog-post__author__avatar"
+              >
+                <img
+                  src={authorName.avatar}
+                  alt={authorName.name}
+                  width="62"
+                  height="62"
+                />
+              </a>
+              <div class="blog-post__author__name">
+                <a
+                  href={`/author/${authorName.name.toLowerCase().replace(" ", "-")}`}
+                  class="blog-post__author__name__link"
+                >
+                  {authorName.name}
+                </a>
+              </div>
+            </li>
+          ))
+        }
       </ul>
-      <div class="markdown-text">
+      <div class="blog-post__size-wrapper">
+        <p>{readingTime}<span> min read</span></p>
+      </div>
+      <div class="blog-post__content post-content">
         <slot />
       </div>
     </article>
-    <section
-      class="max-w-screen-md mx-auto pt-[48px] flex flex-col items-center">
-      <h2 class="text-2xl">Recent Posts</h2>
-      <div class="grid sm:grid-cols-2 gap-5 mt-5">
+    <div class="blog-post__social-buttons" id="social-buttons">
+      <div class="blog-post__social-buttons__wrapper">
+        <a
+          id="social-button-hn"
+          title="Discuss on Hacker News"
+          href="https://news.ycombinator.com/submitlink?u=https://blog.cloudflare.com/using-fortran-on-cloudflare-workers"
+          target="_blank"
+          rel="noreferrer"
+          class="blog-post__social-buttons__wrapper__button"
+          style="background-color: rgb(0, 85, 220);"
+        >
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            viewBox="0 0 512 512"
+            class="mr2"
+          >
+            <g>
+              <path
+                d="M31,31v450h450V31H31z M270.1,287.6v94.9h-28.1v-94.9L165,143.5h31.9L256,254.3l59.1-110.8H347
+                C347,143.5,270.1,287.6,270.1,287.6z"
+              ></path>
+            </g>
+          </svg>
+          <span class="blog-post__social-buttons__wrapper__button__text"
+            >Discuss on Hacker News</span
+          >
+        </a>
+      </div>
+    </div>
+    <iframe
+      sandbox="allow-scripts allow-popups"
+      title="cloudflare-tv-live-link"
+      id="cloudflare-tv-embed"
+      src="https://cloudflare.tv/embed/live.html"
+      loading="lazy"></iframe>
+    <section class="blog-post__tags">
+      {
+        tags.map((tag, i) => (
+          <a href={`/tags/${tag.toLowerCase()}`} key={i}>
+            {tag[0].toUpperCase() + tag.slice(1)}
+          </a>
+        ))
+      }
+    </section>
+    <section class="blog-post__author-socials">
+      <div class="blog-post__author-socials__wrapper">
+        <div class="blog-post__author-socials__wrapper__headline">
+          <p>Follow on X</p>
+        </div>
         {
-          posts.slice(0, 2).map((post, i) => (
-            <div class="max-w-[420px]">
-              <PostSummary post={post} />
-            </div>
-          ))
+          author
+            .filter((authorName) => authorName.social)
+            .map((authorName) => (
+              <div
+                class="blog-post__author-socials__wrapper__socials"
+                key={authorName.name}
+              >
+                {authorName.name}
+                <span class="blog-post__author-socials__wrapper__socials__seperator">
+                  |
+                </span>
+                <a
+                  href={`https://twitter.com/${authorName.social}`}
+                  class="blog-post__author-socials__wrapper__socials__link"
+                >
+                  {authorName.social}
+                </a>
+              </div>
+            ))
         }
+        <div class="blog-post__author-socials__wrapper__socials">
+          <span>Cloudflare</span>
+          <span class="blog-post__author-socials__wrapper__socials__seperator"
+            >|</span
+          >
+          <a
+            href="https://twitter.com/@cloudflare"
+            class="blog-post__author-socials__wrapper__socials__link"
+          >
+            @cloudflare
+          </a>
+        </div>
       </div>
     </section>
+
+    {
+      relatedPosts.length > 0 && (
+        <section class="blog-post__recent-posts">
+          <h2 class="blog-post__recent-title">Recent Posts</h2>
+          <div class="blog-post__recent-grid">
+            {relatedPosts.slice(0, 4).map((post) => (
+              <RelatedPosts post={post} />
+            ))}
+          </div>
+        </section>
+      )
+    }
   </main>
 </Layout>
-
-<style>
-  .post-size {
-    position: relative;
-  }
-
-  .post-size::after {
-    position: absolute;
-    content: '';
-    background: #4d4d4d;
-    width: 1px;
-    height: 15px;
-    top: 50%;
-    right: -10%;
-    transform: translate(-50%, -50%);
-  }
-
-  @media (min-width: 640px) {
-    .post-data-list-item {
-      position: relative;
-    }
-
-    .post-data-list-item::after {
-      position: absolute;
-      content: '';
-      background: #4d4d4d;
-      width: 1px;
-      height: 15px;
-      top: 50%;
-      right: -12%;
-      transform: translate(-50%, -50%);
-    }
-  }
-</style>

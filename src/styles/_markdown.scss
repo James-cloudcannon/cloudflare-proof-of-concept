@@ -1,116 +1,261 @@
-.markdown-text h1,
-.markdown-text h2,
-.markdown-text h3,
-.markdown-text h4 {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+.post-content {
+  overflow-wrap: break-word
 }
 
-.markdown-text h1 {
-  font-size: 3rem;
-  line-height: 3rem;
-}
-.markdown-text h2 {
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-}
-.markdown-text h3 {
-  font-size: 2rem;
-  line-height: 2rem;
-}
-.markdown-text h4 {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-}
-.markdown-text p,
-.markdown-text a,
-.markdown-text ol li,
-.markdown-text ul li {
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  line-height: 1.75rem;
+.post-content table {
+  margin: 1em 0
 }
 
-.markdown-text p {
-  margin-bottom: 1.5rem;
+.post-content h2 {
+  font-size: 32px;
+  line-height: 32px;
+  max-width: 612px;
+  margin: 1em auto
 }
-.markdown-text li p {
-  margin-bottom: 0.125rem;
+
+.post-content h3 {
+  max-width: 612px;
+  font-size: 28px;
+  line-height: 28px;
+  margin: 1em auto
 }
-.markdown-text li {
-  margin-bottom: 0.25rem;
+
+.post-content pre {
+  max-width: 612px;
+  margin: 1em auto !important
 }
-.markdown-text blockquote {
-  font-style: italic;
-  border-left: 5px solid #000000;
-  padding-inline: 1rem;
-  margin-inline: 0;
-  margin-block: 1rem;
+
+.post-content p {
+  font-size: 18px
 }
-.markdown-text ul li {
-  margin-inline: 1rem;
-  padding-block: 0.125rem;
-  list-style: disc;
+
+.post-content blockquote,
+.post-content ol,
+.post-content p,
+.post-content ul {
+  max-width: 34em;
+  margin: 1rem auto
 }
-.markdown-text ol li {
-  list-style-type: decimal;
-  padding-block: 0.125rem;
-  margin-inline: 1rem;
+
+.post-content hr {
+  max-width: 38em
 }
-.markdown-text a {
-  color: blue;
-  cursor: pointer;
+
+.post-content li {
+  max-width: 34em
 }
-.markdown-text sup {
-  vertical-align: super;
-  font-size: smaller;
+
+.post-content a {
+  border-bottom: 2px solid;
+  color: #0051c3;
+  text-decoration: none
 }
-.markdown-text sub {
-  vertical-align: sub;
-  font-size: smaller;
+
+.post-full-image+.post-full-content .kg-content :first-child .kg-image {
+  width: 100%
 }
-.markdown-text code {
-  background-color: #f4f4f4;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  color: black;
-  margin-block: 1.5rem;
+
+.post-full-content figure {
+  margin: 1em 0
 }
-.markdown-text table {
+
+.post-full-content figure img {
+  margin: 0
+}
+
+.post-full-content figcaption {
+  margin: 1em 0 0;
+  font-size: 80%;
+  line-height: 1.6em;
+  text-align: center
+}
+
+.post-content blockquote,
+.post-content ol,
+.post-content p,
+.post-content ul {
   width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1.5rem;
-}
-
-.markdown-text table p {
-  margin-bottom: 0;
-  padding-block: 0.5rem;
-}
-.markdown-text th,
-.markdown-text td {
-  border: 1px solid #f2f2f2;
-  padding: 0.5rem;
-}
-.markdown-text table caption {
-  background-color: #f2f2f2;
-}
-.markdown-text table thead {
-  background-color: #f2f2f2;
-}
-.markdown-text img {
   max-width: 100%;
-  height: auto;
-  margin: 1rem auto;
-}
-.markdown-text hr {
-  border: 0;
-  border-top: 1px solid #928f8f;
-  margin: 1.5rem 0;
+  margin-left: 0;
+  line-height: 1.6
 }
 
-.markdown-text pre {
-  background-color: #f2f2f2 !important;
-  color: black;
-  margin-block: 1.5rem;
-  padding: 1rem;
+iframe {
+  margin-bottom: 2em;
+  width: 100%;
+  height: 50vw;
+  max-height: 450px;
+  border-color: transparent
+}
+
+.post-content p>img {
+  display: block;
+  margin: 0 auto
+}
+
+.post-content hr {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 2.5em 0 3.5em;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid color(var(--lightgrey) l(+10%))
+}
+
+.post-content fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0
+}
+
+.post-content textarea {
+  resize: vertical
+}
+
+.post-content pre,
+.post-content code {
+  font-size: .8em;
+  line-height: 1.15 !important;
+  line-height: inherit;
+  overflow: auto;
+  max-width: 100%
+}
+
+.post-content pre {
+  background: #f5f2f0;
+  padding: 1em
+}
+
+.post-content p,
+.post-content ul,
+.post-content ol,
+.post-content dl,
+.post-content blockquote {
+  margin: 0 0 1.5em;
+  font-size: 20px
+}
+
+.post-content p {
+  margin-bottom: 1em
+}
+
+.post-content ol,
+.post-content ul {
+  padding-left: 1.3em;
+  padding-right: 1.5em;
+  margin-bottom: 0
+}
+
+.post-content ol ol,
+.post-content ul ul,
+.post-content ul ol,
+.post-content ol ul {
+  margin: .5em 0 1em
+}
+
+.post-content ul {
+  list-style: disc
+}
+
+.post-content ol {
+  list-style: decimal
+}
+
+.post-content ul,
+.post-content ol {
+  max-width: 100%
+}
+
+.post-content li {
+  margin: .5em 0;
+  padding-left: .3em;
+  line-height: 1.6em
+}
+
+.post-content ul ul {
+  margin-bottom: 0;
+  padding-bottom: 0
+}
+
+.post-content ul ul>li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0
+}
+
+.post-content dt {
+  float: left;
+  margin: 0 20px 0 0;
+  width: 120px;
+  color: var(--darkgrey);
+  font-weight: 500;
+  text-align: right
+}
+
+.post-content dd {
+  margin: 0 0 5px;
+  text-align: left
+}
+
+blockquote {
+  margin: 1.5em 0;
+  padding: 0 1.6em;
+  border-left: var(--whitegrey) .5em solid
+}
+
+blockquote p {
+  margin: .8em 0;
+  font-size: 1.2em;
+  font-weight: 300
+}
+
+blockquote small {
+  display: inline-block;
+  margin: .8em 0 .8em 1.5em;
+  font-size: .9em;
+  opacity: .8
+}
+
+blockquote small:before {
+  content: "— "
+}
+
+blockquote cite {
+  font-weight: 700
+}
+
+blockquote cite a {
+  font-weight: 400
+}
+
+.post-content blockquote a {
+  text-decoration: underline
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  margin: 0 0 .5em;
+  line-height: 1.15;
+  font-weight: 700;
+  text-rendering: optimizeLegibility
+}
+
+.post-content blockquote,
+.post-content ol,
+.post-content p,
+.post-content ul {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  line-height: 1.6
+}
+
+.post-content pre {
+  display: contents;
+  white-space: pre-wrap
 }
