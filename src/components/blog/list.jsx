@@ -1,13 +1,15 @@
 import PostSummary from './summary';
+import './_blog-list.scss';
 
 export default function BlogList({ posts }) {
+  console.log(posts.data)
   if (posts.length > 0) {
     return (
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 justify-between gap-5 mt-8 md:mt-16">
-        {posts.map((post, i) => (
-          <PostSummary post={post} key={i} />
-        ))}
-      </div>
+        <div className="blog-list">
+          {posts.map((post, i) => (
+            <PostSummary post={post} key={i} />
+          ))}
+        </div>
     );
   }
   return;
