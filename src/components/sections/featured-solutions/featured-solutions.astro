@@ -1,0 +1,78 @@
+---
+import "./_featured-solutions.scss";
+const { content, style } = Astro.props;
+const { heading, features, background_image, CTA } = content;
+
+const themeClass =  style.theme === "Dark" ? "background-color: #000; color: #fff;" : "background-color: #fff; color: #222;";
+---
+
+<section
+  class="featured-solutions"
+  style={`background-image: url(${background_image}); ${themeClass}`}
+>
+  <div class="featured-solutions__container">
+    <div
+      class="featured-solutions__content"
+      style={`background: linear-gradient(${style.theme === "Dark" ? "#000, #000" : "#fff, #fff"}) padding-box, linear-gradient(180deg, #f63, #f68c1f, #fbad41) border-box;`}
+    >
+      <div class="featured-solutions__heading-wrapper">
+        <div class="featured-solutions__heading-container">
+          <h3 class="featured-solutions__heading">
+            {heading}
+          </h3>
+        </div>
+      </div>
+      <div class="featured-solutions__features">
+        {
+          features.slice(0, 3).map((feature, index) => (
+            <div class="featured-solutions__feature" key={index}>
+              <div class="featured-solutions__feature-container">
+                <div class="featured-solutions__image-wrapper">
+                  <img
+                    class="featured-solutions__image"
+                    src={feature.image}
+                    alt=""
+                  />
+                </div>
+                <h5 class="featured-solutions__feature-heading">
+                  {feature.heading}
+                </h5>
+                <p class="featured-solutions__feature-text">{feature.text}</p>
+                <div class="featured-solutions__links">
+                  {feature.links.slice(0, 2).map((link, linkIndex) => (
+                    <a
+                      href={link.url}
+                      class="featured-solutions__link"
+                      key={linkIndex}
+                    >
+                      {link.text}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+     
+    </div>
+    {
+        CTA && (
+          <div class="featured-solutions__cta">
+            <div class="featured-solutions__cta-wrapper">
+              <span class="featured-solutions__cta-heading">{CTA.heading}</span>
+              <a
+                href={CTA.button.link}
+                class="featured-solutions__cta-button"
+                tabindex="0"
+                role="button"
+                aria-label={CTA.button.text}
+              >
+                {CTA.button.text}
+              </a>
+            </div>
+          </div>
+        )
+      }
+  </div>
+</section>
