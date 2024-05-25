@@ -19,13 +19,14 @@ blueprint:
     buttons: 
       - text: ""
         link: ""
-    image: 
-      image_path: ""
-      image_alt: ""
     features:
-      - heading: ""
-        icon: ""
-        text: ""
+      image: 
+        image_path: ""
+        image_alt: ""
+      feature:
+        - heading: ""
+          icon: ""
+          text: ""
     background_image: ""
   style: 
     background_color: ""
