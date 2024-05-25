@@ -78,18 +78,20 @@ add.f90:
     END
 ```
 
-<SnippetsCodeBlock code="add.f90:
+```javascript
+SUBROUTINE add(a, b, res)
+    INTEGER, INTENT(IN) :: a, b
+    INTEGER, INTENT(OUT) :: res
 
-    SUBROUTINE add(a, b, res)
-        INTEGER, INTENT(IN) :: a, b
-        INTEGER, INTENT(OUT) :: res
-
-        res = a + b
-    END" language="perl"/>
+    res = a + b
+END" language="perl"/>
+```
 
 Here we defined a subroutine called add that takes `a` and `b`, sums them together and places the result in `res`.
 
 Compile with [Fortiche](https://github.com/cloudflare/fortiche):
+
+<CodeBlock code="docker run -v $PWD:/input -v $PWD/output:/output xtuc/fortiche --export-func=add add.f90" language="docker"/>
 
 ```
 
