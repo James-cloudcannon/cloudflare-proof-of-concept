@@ -1,20 +1,20 @@
 ---
-import hljs from 'highlight.js';
-
-const { code, lang = 'js' } = Astro.props;
+import { Prism } from '@astrojs/prism';
 
 
-
-let highlightedCode = hljs.highlight(code, { language: lang }).value;
-
-highlightedCode = highlightedCode.replaceAll("&quot;",`"`)
-.replaceAll("&amp;","&")
-.replaceAll("&#39;","'")
-.replaceAll("&lt;","<")
-.replaceAll("&gt;",">")
+const {
+    code,
+    lang,
+} = Astro.props;
 
 
-let html = `<div class="hljs ${lang}">${"```"+lang+"\n"+highlightedCode+"\n"+"```"}</div>`;
 ---
 
-<Fragment set:html={html} />
+<figure class={`hljs code-block language-${lang}`}>
+    <Prism
+        code={code}
+        lang={lang}
+    />
+
+</figure>
+

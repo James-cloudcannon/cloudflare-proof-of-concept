@@ -114,19 +114,19 @@ iframe {
   resize: vertical
 }
 
-// .post-content pre,
-// .post-content code {
-//   font-size: .8em;
-//   line-height: 1.15 !important;
-//   line-height: inherit;
-//   overflow: auto;
-//   max-width: 100%
-// }
+.post-content pre,
+.post-content code {
+  font-size: .8em;
+  line-height: 1.15 !important;
+  line-height: inherit;
+  overflow: auto;
+  max-width: 100%
+}
 
-// .post-content pre {
-//   background: #f5f2f0;
-//   padding: 1em
-// }
+.post-content pre {
+  background: #f5f2f0;
+  padding: 1em
+}
 
 .post-content p,
 .post-content ul,
@@ -254,8 +254,3 @@ blockquote cite a {
   margin-left: 0;
   line-height: 1.6
 }
-
-// .post-content pre {
-//   display: contents;
-//   white-space: pre-wrap
-// }
