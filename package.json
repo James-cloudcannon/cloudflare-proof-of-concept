@@ -29,6 +29,7 @@
     "alpinejs": "^3.13.8",
     "astro": "4.0.0",
     "astro-auto-import": "^0.4.2",
+    "escape-html": "^1.0.3",
     "highlight.js": "^11.9.0",
     "html-to-text": "^9.0.5",
     "json-to-pretty-yaml": "^1.2.2",

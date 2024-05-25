@@ -1,11 +1,10 @@
 ---
 import { Prism } from '@astrojs/prism';
+import escapeHTML from 'escape-html';
 
 const { code, lang } = Astro.props;
 
-const escapeQuotes = (str) => str.replace(/"/g, '\\"').replace(/'/g, "\\'");
-
-const escapedCode = escapeQuotes(code);
+const escapedCode = escapeHTML(code);
 
 ---
 
