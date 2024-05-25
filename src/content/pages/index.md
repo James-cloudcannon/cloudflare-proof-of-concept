@@ -46,5 +46,41 @@ content_blocks:
         link: https://www.cloudflare.com/en-gb/plans/enterprise/contact/
     style: 
      theme: "background-color: #ffffff; color: #222;"
+  - _bookshop_name: sections/featured_solutions 
+    content:
+      heading: >-
+        Powered by an intelligent global network, our connectivity cloud is a unified platform that helps your business work, deliver, and innovate everywhere.
+      features:
+        - heading: SASE and SSE services
+          image: https://cf-assets.www.cloudflare.com/slt3lc6tev37/2pqDYkVg8K6GqUXO2x7Izl/2d2a67e1288dbd9fc5eadcd48b56333f/SSE_SASE_01.svg
+          text: >-
+            Connect and secure your employees, contractors, devices, networks, apps, and data everywhere they live.
+          links: 
+            - text: Explore SASE / SSE
+              url: https://www.cloudflare.com/en-gb/zero-trust/
+        - heading: App and infrastructure services
+          image: https://cf-assets.www.cloudflare.com/slt3lc6tev37/6PDJxm9gpmdAMR1JSTQRSl/1ad54dc5651ec6d7edd26c3785766bd5/Apps_Infrastructure.svg_01.svg
+          text: >-
+            Give your digital products and services top-notch security, reliability, and performance for customers everywhere.
+          links: 
+            - text: Explore apps
+              url: https://www.cloudflare.com/en-gb/application-services/
+            - text: Explore infrastructure
+              url: https://www.cloudflare.com/en-gb/network-services/
+        - heading: Developer services
+          image: https://cf-assets.www.cloudflare.com/slt3lc6tev37/2pqDYkVg8K6GqUXO2x7Izl/2d2a67e1288dbd9fc5eadcd48b56333f/SSE_SASE_01.svg
+          text: >-
+            Easily build and deploy full-stack applications everywhere, thanks to integrated compute, storage, and networking.
+          links: 
+            - text: Explore developer services
+              url: https://www.cloudflare.com/en-gb/developer-platform/
+      background_image: ""
+      CTA:
+        heading: Want to speak with an expert?
+        button: 
+          text: Get in touch
+          link: https://www.cloudflare.com/en-gb/plans/enterprise/contact/
+    style: 
+      theme: Light
     
 ---
