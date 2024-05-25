@@ -294,8 +294,8 @@ _snippets:
         - editor_key: code
           source_key: code
           type: string
-        - editor_key: language
-          source_key: language
+        - editor_key: lang
+          source_key: lang
           type: string
     _inputs:
       code:
