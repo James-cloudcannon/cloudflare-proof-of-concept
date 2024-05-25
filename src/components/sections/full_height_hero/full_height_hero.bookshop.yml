@@ -29,7 +29,7 @@ blueprint:
           text: ""
     background_image: ""
   style: 
-    background_color: ""
+    theme: ""
   
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
@@ -50,7 +50,7 @@ _inputs:
     type: textarea
   background_image:
     type: image
-  background_color:
+  theme:
     type: select 
     options:  
       values: 

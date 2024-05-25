@@ -45,6 +45,6 @@ content_blocks:
         text: Contact sales
         link: https://www.cloudflare.com/en-gb/plans/enterprise/contact/
     style: 
-     theme_color: "background-color: #ffffff; color: #222;"
+     theme: "background-color: #ffffff; color: #222;"
     
 ---
