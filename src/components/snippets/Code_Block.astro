@@ -1,5 +1,5 @@
 ---
-import { Code } from 'astro:components';
+import { Prism as Code } from '@astrojs/prism';
 
 const { code, lang, isInline, isWrapped } = Astro.props;
 ---
@@ -7,6 +7,4 @@ const { code, lang, isInline, isWrapped } = Astro.props;
 <Code
   code={code}
   lang={lang}
-  {...isInline ? { inline: true } : {}}
-  {...isWrapped ? { wrap: true } : {}}
 />

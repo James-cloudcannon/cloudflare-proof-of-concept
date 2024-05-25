@@ -297,12 +297,6 @@ _snippets:
         - editor_key: language
           source_key: language
           type: string
-        - editor_key: isWrapped
-          source_key: isWrapped
-          type: boolean
-        - editor_key: isInline
-          source_key: isInline
-          type: boolean
     _inputs:
       code:
         type: textarea
@@ -316,10 +310,6 @@ _snippets:
               value: css
             - text: JavaScript
               value: javascript
-      isWrapped:
-        type: boolean
-      isInline:
-        type: boolean
   alert:
     template: mdx_component
     inline: false
