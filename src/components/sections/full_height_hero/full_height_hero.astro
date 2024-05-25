@@ -1,0 +1,82 @@
+---
+import './_full_height_hero.scss'
+const { content, style } = Astro.props;
+const { heading, subheading, buttons, features, background_image, CTA_button } = content;
+---
+
+<section class="full-height-hero">
+  <div
+    class="full-height-hero__container"
+    style={`background-image: url(${background_image}); ${style.theme_color}`}
+  >
+    <div class="full-height-hero__container__content">
+      <div class="full-height-hero__container__content__header">
+        <h1>{heading}</h1>
+        <p>{subheading}</p>
+      </div>
+      {buttons?.length > 0 && (
+        <div class="full-height-hero__container__content__buttons">
+          {buttons.map(button => (
+            <a
+              href={button.url}
+              tabindex="0"
+              role="button"
+              data-tracking-label={`sign_up-[${button.url}]`}
+            >
+              {button.text}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+
+    <div class="full-height-hero__container__features">
+      <div class="full-height-hero__container__features__wrapper">
+        {features.feature?.length > 0 && (
+          <div class="full-height-hero__container__features__wrapper__column">
+            {features.feature.slice(0, 2).map(feature => (
+              <div class="full-height-hero__container__features__wrapper__column__item">
+                <h4>
+                  <img src={feature.icon} alt="" />
+                  <span>{feature.heading}</span>
+                </h4>
+                <p>{feature.text}</p>
+              </div>
+            ))}
+          </div>
+        )}
+        <div class="full-height-hero__container__features__wrapper__column featured_image">
+          <img
+            src={features.image.image_path}
+            alt={features.image.image_alt}
+          />
+        </div>
+        {features.feature?.length > 2 && (
+          <div class="full-height-hero__container__features__wrapper__column">
+            {features.feature.slice(2, 4).map(feature => (
+              <div class="full-height-hero__container__features__wrapper__column__item">
+                <h4>
+                  <img src={feature.icon} alt="" />
+                  <span>{feature.heading}</span>
+                </h4>
+                <p>{feature.text}</p>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+
+    { CTA_button && (
+    <div class="full-height-hero__container__cta">
+      <a
+        href={CTA_button?.link}
+        tabindex="0"
+        role="button"
+      >
+        {CTA_button?.text}
+      </a>
+    </div>
+    )}
+  </div>
+</section>
