@@ -29,7 +29,7 @@ const blogCollection = defineCollection({
     thumb_image_alt: z.string().optional(),
     image: z.string().optional(),
     image_alt: z.string().optional(),
-    featured: z.boolean(),
+    featured: z.boolean().optional(),
     seo: seoSchema,
   }),
 });
