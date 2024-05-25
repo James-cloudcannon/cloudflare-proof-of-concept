@@ -1,6 +1,9 @@
 ---
 import Layout from "./Layout.astro";
-import RelatedPosts from "../components/blog/related-posts";
+import RelatedPosts from "../components/blog/RelatedPosts.astro";
+import SocialButtons from "../components/blog/SocialButtons.astro";
+import CloudflareTV from "../components/blog/CloudflareTV.astro";
+import AuthorSocials from "../components/blog/AuthorSocials.astro";
 import { getCollection } from "astro:content";
 import type { MarkdownLayoutProps } from "astro";
 
@@ -38,16 +41,6 @@ const formattedDate = dateObj.toLocaleDateString("en-US", {
 });
 
 const posts = await getCollection("blog");
-
-const relatedPosts = posts
-  .filter(
-    (post) =>
-      post.slug !== slug && post.data.tags.some((tag) => tags.includes(tag))
-  )
-  .map((post) => {
-    post.data.featured = false;
-    return post;
-  });
 ---
 
 <Layout {...props}>
@@ -91,45 +84,8 @@ const relatedPosts = posts
         <slot />
       </div>
     </article>
-    <div class="blog-post__social-buttons" id="social-buttons">
-      <div class="blog-post__social-buttons__wrapper">
-        <a
-          id="social-button-hn"
-          title="Discuss on Hacker News"
-          href="https://news.ycombinator.com/submitlink?u=https://blog.cloudflare.com/using-fortran-on-cloudflare-workers"
-          target="_blank"
-          rel="noreferrer"
-          class="blog-post__social-buttons__wrapper__button"
-          style="background-color: rgb(0, 85, 220);"
-        >
-          <svg
-            version="1.1"
-            id="Layer_1"
-            xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
-            viewBox="0 0 512 512"
-            class="mr2"
-          >
-            <g>
-              <path
-                d="M31,31v450h450V31H31z M270.1,287.6v94.9h-28.1v-94.9L165,143.5h31.9L256,254.3l59.1-110.8H347
-                C347,143.5,270.1,287.6,270.1,287.6z"
-              ></path>
-            </g>
-          </svg>
-          <span class="blog-post__social-buttons__wrapper__button__text"
-            >Discuss on Hacker News</span
-          >
-        </a>
-      </div>
-    </div>
-    <iframe
-      sandbox="allow-scripts allow-popups"
-      title="cloudflare-tv-live-link"
-      id="cloudflare-tv-embed"
-      src="https://cloudflare.tv/embed/live.html"
-      loading="lazy"></iframe>
+    <SocialButtons title={title} slug={slug} />
+    <CloudflareTV />
     <section class="blog-post__tags">
       {
         tags.map((tag, i) => (
@@ -139,58 +95,33 @@ const relatedPosts = posts
         ))
       }
     </section>
-    <section class="blog-post__author-socials">
-      <div class="blog-post__author-socials__wrapper">
-        <div class="blog-post__author-socials__wrapper__headline">
-          <p>Follow on X</p>
-        </div>
-        {
-          author
-            .filter((authorName) => authorName.social)
-            .map((authorName) => (
-              <div
-                class="blog-post__author-socials__wrapper__socials"
-                key={authorName.name}
-              >
-                {authorName.name}
-                <span class="blog-post__author-socials__wrapper__socials__seperator">
-                  |
-                </span>
-                <a
-                  href={`https://twitter.com/${authorName.social}`}
-                  class="blog-post__author-socials__wrapper__socials__link"
-                >
-                  {authorName.social}
-                </a>
-              </div>
-            ))
-        }
-        <div class="blog-post__author-socials__wrapper__socials">
-          <span>Cloudflare</span>
-          <span class="blog-post__author-socials__wrapper__socials__seperator"
-            >|</span
-          >
-          <a
-            href="https://twitter.com/@cloudflare"
-            class="blog-post__author-socials__wrapper__socials__link"
-          >
-            @cloudflare
-          </a>
-        </div>
-      </div>
-    </section>
-
+    <AuthorSocials author={author} />
     {
-      relatedPosts.length > 0 && (
-        <section class="blog-post__recent-posts">
-          <h2 class="blog-post__recent-title">Recent Posts</h2>
-          <div class="blog-post__recent-grid">
-            {relatedPosts.slice(0, 4).map((post) => (
-              <RelatedPosts post={post} />
-            ))}
-          </div>
-        </section>
-      )
+      (() => {
+        const relatedPosts = posts
+          .filter(
+            (post) =>
+              post.slug !== slug &&
+              post.data.tags.some((tag) => tags.includes(tag))
+          )
+          .map((post) => {
+            post.data.featured = false;
+            return post;
+          });
+
+        return (
+          relatedPosts.length > 0 && (
+            <section class="blog-post__recent-posts">
+              <h2 class="blog-post__recent-title">Recent Posts</h2>
+              <div class="blog-post__recent-grid">
+                {relatedPosts.slice(0, 4).map((post) => (
+                  <RelatedPosts post={post} />
+                ))}
+              </div>
+            </section>
+          )
+        );
+      })()
     }
   </main>
 </Layout>

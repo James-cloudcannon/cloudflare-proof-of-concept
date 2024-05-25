@@ -1,0 +1,44 @@
+---
+const { author } = Astro.props;
+---
+
+<section class="blog-post__author-socials">
+  <div class="blog-post__author-socials__wrapper">
+    <div class="blog-post__author-socials__wrapper__headline">
+      <p>Follow on X</p>
+    </div>
+    {
+      author
+        .filter((authorName) => authorName.social)
+        .map((authorName) => (
+          <div
+            class="blog-post__author-socials__wrapper__socials"
+            key={authorName.name}
+          >
+            {authorName.name}
+            <span class="blog-post__author-socials__wrapper__socials__seperator">
+              |
+            </span>
+            <a
+              href={`https://twitter.com/${authorName.social}`}
+              class="blog-post__author-socials__wrapper__socials__link"
+            >
+              {authorName.social}
+            </a>
+          </div>
+        ))
+    }
+    <div class="blog-post__author-socials__wrapper__socials">
+      <span>Cloudflare</span>
+      <span class="blog-post__author-socials__wrapper__socials__seperator"
+        >|</span
+      >
+      <a
+        href="https://twitter.com/@cloudflare"
+        class="blog-post__author-socials__wrapper__socials__link"
+      >
+        @cloudflare
+      </a>
+    </div>
+  </div>
+</section>

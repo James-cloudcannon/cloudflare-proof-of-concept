@@ -1,0 +1,37 @@
+---
+const { title, slug } = Astro.props;
+---
+
+<div class="blog-post__social-buttons" id="social-buttons">
+  <div class="blog-post__social-buttons__wrapper">
+    <a
+      id="social-button-hn"
+      title="Discuss on Hacker News"
+      href={`https://news.ycombinator.com/submitlink?u=https://blog.cloudflare.com/${slug}`}
+      target="_blank"
+      rel="noreferrer"
+      class="blog-post__social-buttons__wrapper__button"
+      style="background-color: rgb(0, 85, 220);"
+    >
+      <svg
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        viewBox="0 0 512 512"
+        class="mr2"
+      >
+        <g>
+          <path
+            d="M31,31v450h450V31H31z M270.1,287.6v94.9h-28.1v-94.9L165,143.5h31.9L256,254.3l59.1-110.8H347
+              C347,143.5,270.1,287.6,270.1,287.6z"
+          ></path>
+        </g>
+      </svg>
+      <span class="blog-post__social-buttons__wrapper__button__text"
+        >Discuss on Hacker News</span
+      >
+    </a>
+  </div>
+</div>
