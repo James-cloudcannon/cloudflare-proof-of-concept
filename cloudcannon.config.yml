@@ -304,598 +304,598 @@ _snippets:
         type: select
         options:
           values:
-            - text: Markup
-              value: markup
-            - text: CSS
-              value: css
-            - text: C-like
-              value: clike
-            - text: JavaScript
-              value: javascript
-            - text: ABAP
-              value: abap
-            - text: ABNF
-              value: abnf
-            - text: ActionScript
-              value: actionscript
-            - text: Ada
-              value: ada
-            - text: Agda
-              value: agda
-            - text: AL
-              value: al
-            - text: ANTLR4
-              value: antlr4
-            - text: Apache Configuration
-              value: apacheconf
-            - text: Apex
-              value: apex
-            - text: APL
-              value: apl
-            - text: AppleScript
-              value: applescript
-            - text: AQL
-              value: aql
-            - text: Arduino
-              value: arduino
-            - text: ARFF
-              value: arff
-            - text: ARM Assembly
-              value: armasm
-            - text: Arturo
-              value: arturo
-            - text: AsciiDoc
-              value: asciidoc
-            - text: ASP.NET (C#)
-              value: aspnet
-            - text: 6502 Assembly
-              value: asm6502
-            - text: Atmel AVR Assembly
-              value: asmatmel
-            - text: AutoHotkey
-              value: autohotkey
-            - text: AutoIt
-              value: autoit
-            - text: AviSynth
-              value: avisynth
-            - text: Avro IDL
-              value: avro-idl
-            - text: AWK
-              value: awk
-            - text: Bash
-              value: bash
-            - text: BASIC
-              value: basic
-            - text: Batch
-              value: batch
-            - text: BBcode
-              value: bbcode
-            - text: BBj
-              value: bbj
-            - text: Bicep
-              value: bicep
-            - text: Birb
-              value: birb
-            - text: Bison
-              value: bison
-            - text: BNF
-              value: bnf
-            - text: BQN
-              value: bqn
-            - text: Brainfuck
-              value: brainfuck
-            - text: BrightScript
-              value: brightscript
-            - text: Bro
-              value: bro
-            - text: BSL (1C:Enterprise)
-              value: bsl
-            - text: C
-              value: c
-            - text: C#
-              value: csharp
-            - text: C++
-              value: cpp
-            - text: CFScript
-              value: cfscript
-            - text: ChaiScript
-              value: chaiscript
-            - text: CIL
-              value: cil
-            - text: Cilk/C
-              value: cilkc
-            - text: Cilk/C++
-              value: cilkcpp
-            - text: Clojure
-              value: clojure
-            - text: CMake
-              value: cmake
-            - text: COBOL
-              value: cobol
-            - text: CoffeeScript
-              value: coffeescript
-            - text: Concurnas
-              value: concurnas
-            - text: Content-Security-Policy
-              value: csp
-            - text: Cooklang
-              value: cooklang
-            - text: Coq
-              value: coq
-            - text: Crystal
-              value: crystal
-            - text: CSS Extras
-              value: css-extras
-            - text: CSV
-              value: csv
-            - text: CUE
-              value: cue
-            - text: Cypher
-              value: cypher
-            - text: D
-              value: d
-            - text: Dart
-              value: dart
-            - text: DataWeave
-              value: dataweave
-            - text: DAX
-              value: dax
-            - text: Dhall
-              value: dhall
-            - text: Diff
-              value: diff
-            - text: Django/Jinja2
-              value: django
-            - text: DNS zone file
-              value: dns-zone-file
-            - text: Docker
-              value: docker
-            - text: DOT (Graphviz)
-              value: dot
-            - text: EBNF
-              value: ebnf
-            - text: EditorConfig
-              value: editorconfig
-            - text: Eiffel
-              value: eiffel
-            - text: EJS
-              value: ejs
-            - text: Elixir
-              value: elixir
-            - text: Elm
-              value: elm
-            - text: Embedded Lua templating
-              value: etlua
-            - text: ERB
-              value: erb
-            - text: Erlang
-              value: erlang
-            - text: Excel Formula
-              value: excel-formula
-            - text: F#
-              value: fsharp
-            - text: Factor
-              value: factor
-            - text: "False"
-              value: "false"
-            - text: Firestore security rules
-              value: firestore-security-rules
-            - text: Flow
-              value: flow
-            - text: Fortran
-              value: fortran
-            - text: FreeMarker Template Language
-              value: ftl
-            - text: GameMaker Language
-              value: gml
-            - text: GAP (CAS)
-              value: gap
-            - text: G-code
-              value: gcode
-            - text: GDScript
-              value: gdscript
-            - text: GEDCOM
-              value: gedcom
-            - text: gettext
-              value: gettext
-            - text: Gherkin
-              value: gherkin
-            - text: Git
-              value: git
-            - text: GLSL
-              value: glsl
-            - text: GN
-              value: gn
-            - text: GNU Linker Script
-              value: linker-script
-            - text: Go
-              value: go
-            - text: Go module
-              value: go-module
-            - text: Gradle
-              value: gradle
-            - text: GraphQL
-              value: graphql
-            - text: Groovy
-              value: groovy
-            - text: Haml
-              value: haml
-            - text: Handlebars
-              value: handlebars
-            - text: Haskell
-              value: haskell
-            - text: Haxe
-              value: haxe
-            - text: HCL
-              value: hcl
-            - text: HLSL
-              value: hlsl
-            - text: Hoon
-              value: hoon
-            - text: HTTP
-              value: http
-            - text: HTTP Public-Key-Pins
-              value: hpkp
-            - text: HTTP Strict-Transport-Security
-              value: hsts
-            - text: IchigoJam
-              value: ichigojam
-            - text: Icon
-              value: icon
-            - text: ICU Message Format
-              value: icu-message-format
-            - text: Idris
-              value: idris
-            - text: .ignore
-              value: ignore
-            - text: Inform 7
-              value: inform7
-            - text: Ini
-              value: ini
-            - text: Io
-              value: io
-            - text: J
-              value: j
-            - text: Java
-              value: java
-            - text: JavaDoc
-              value: javadoc
-            - text: JavaDoc-like
-              value: javadoclike
-            - text: Java stack trace
-              value: javastacktrace
-            - text: Jexl
-              value: jexl
-            - text: Jolie
-              value: jolie
-            - text: JQ
-              value: jq
-            - text: JSDoc
-              value: jsdoc
-            - text: JS Extras
-              value: js-extras
-            - text: JSON
-              value: json
-            - text: JSON5
-              value: json5
-            - text: JSONP
-              value: jsonp
-            - text: JS stack trace
-              value: jsstacktrace
-            - text: JS Templates
-              value: js-templates
-            - text: Julia
-              value: julia
-            - text: Keepalived Configure
-              value: keepalived
-            - text: Keyman
-              value: keyman
-            - text: Kotlin
-              value: kotlin
-            - text: KuMir (КуМир)
-              value: kumir
-            - text: Kusto
-              value: kusto
-            - text: LaTeX
-              value: latex
-            - text: Latte
-              value: latte
-            - text: Less
-              value: less
-            - text: LilyPond
-              value: lilypond
-            - text: Liquid
-              value: liquid
-            - text: Lisp
-              value: lisp
-            - text: LiveScript
-              value: livescript
-            - text: LLVM IR
-              value: llvm
-            - text: Log file
-              value: log
-            - text: LOLCODE
-              value: lolcode
-            - text: Lua
-              value: lua
-            - text: Magma (CAS)
-              value: magma
-            - text: Makefile
-              value: makefile
-            - text: Markdown
-              value: markdown
-            - text: Markup templating
-              value: markup-templating
-            - text: Mata
-              value: mata
-            - text: MATLAB
-              value: matlab
-            - text: MAXScript
-              value: maxscript
-            - text: MEL
-              value: mel
-            - text: Mermaid
-              value: mermaid
-            - text: METAFONT
-              value: metafont
-            - text: Mizar
-              value: mizar
-            - text: MongoDB
-              value: mongodb
-            - text: Monkey
-              value: monkey
-            - text: MoonScript
-              value: moonscript
-            - text: N1QL
-              value: n1ql
-            - text: N4JS
-              value: n4js
-            - text: Nand To Tetris HDL
-              value: nand2tetris-hdl
-            - text: Naninovel Script
-              value: naniscript
-            - text: NASM
-              value: nasm
-            - text: NEON
-              value: neon
-            - text: Nevod
-              value: nevod
-            - text: nginx
-              value: nginx
-            - text: Nim
-              value: nim
-            - text: Nix
-              value: nix
-            - text: NSIS
-              value: nsis
-            - text: Objective-C
-              value: objectivec
-            - text: OCaml
-              value: ocaml
-            - text: Odin
-              value: odin
-            - text: OpenCL
-              value: opencl
-            - text: OpenQasm
-              value: openqasm
-            - text: Oz
-              value: oz
-            - text: PARI/GP
-              value: parigp
-            - text: Pascal
-              value: pascal
-            - text: Pascaligo
-              value: pascaligo
-            - text: PATROL Scripting Language
-              value: psl
-            - text: PC-Axis
-              value: pcaxis
-            - text: PeopleCode
-              value: peoplecode
-            - text: Perl
-              value: perl
-            - text: PHP
-              value: php
-            - text: PHPDoc
-              value: phpdoc
-            - text: PHP Extras
-              value: php-extras
-            - text: PlantUML
-              value: plant-uml
-            - text: PL/SQL
-              value: plsql
-            - text: PowerQuery
-              value: powerquery
-            - text: PowerShell
-              value: powershell
-            - text: Processing
-              value: processing
-            - text: Prolog
-              value: prolog
-            - text: PromQL
-              value: promql
-            - text: .properties
-              value: properties
-            - text: Protocol Buffers
-              value: protobuf
-            - text: Pug
-              value: pug
-            - text: Puppet
-              value: puppet
-            - text: Pure
-              value: pure
-            - text: PureBasic
-              value: purebasic
-            - text: PureScript
-              value: purescript
-            - text: Python
-              value: python
-            - text: Q#
-              value: qsharp
-            - text: Q (kdb+ database)
-              value: q
-            - text: QML
-              value: qml
-            - text: Qore
-              value: qore
-            - text: R
-              value: r
-            - text: Racket
-              value: racket
-            - text: Razor C#
-              value: cshtml
-            - text: React JSX
-              value: jsx
-            - text: React TSX
-              value: tsx
-            - text: Reason
-              value: reason
-            - text: Regex
-              value: regex
-            - text: Rego
-              value: rego
-            - text: Ren'py
-              value: renpy
-            - text: ReScript
-              value: rescript
-            - text: reST (reStructuredText)
-              value: rest
-            - text: Rip
-              value: rip
-            - text: Roboconf
-              value: roboconf
-            - text: Robot Framework
-              value: robotframework
-            - text: Ruby
-              value: ruby
-            - text: Rust
-              value: rust
-            - text: SAS
-              value: sas
-            - text: Sass (Sass)
-              value: sass
-            - text: Sass (SCSS)
-              value: scss
-            - text: Scala
-              value: scala
-            - text: Scheme
-              value: scheme
-            - text: Shell session
-              value: shell-session
-            - text: Smali
-              value: smali
-            - text: Smalltalk
-              value: smalltalk
-            - text: Smarty
-              value: smarty
-            - text: SML
-              value: sml
-            - text: Solidity (Ethereum)
-              value: solidity
-            - text: Solution file
-              value: solution-file
-            - text: Soy (Closure Template)
-              value: soy
-            - text: SPARQL
-              value: sparql
-            - text: Splunk SPL
-              value: splunk-spl
-            - text: "SQF: Status Quo Function (Arma 3)"
-              value: sqf
-            - text: SQL
-              value: sql
-            - text: Squirrel
-              value: squirrel
-            - text: Stan
-              value: stan
-            - text: Stata Ado
-              value: stata
-            - text: Structured Text (IEC 61131-3)
-              value: iecst
-            - text: Stylus
-              value: stylus
-            - text: SuperCollider
-              value: supercollider
-            - text: Swift
-              value: swift
-            - text: Systemd configuration file
-              value: systemd
-            - text: T4 templating
-              value: t4-templating
-            - text: T4 Text Templates (C#)
-              value: t4-cs
-            - text: T4 Text Templates (VB)
-              value: t4-vb
-            - text: TAP
-              value: tap
-            - text: Tcl
-              value: tcl
-            - text: Template Toolkit 2
-              value: tt2
-            - text: Textile
-              value: textile
-            - text: TOML
-              value: toml
-            - text: Tremor
-              value: tremor
-            - text: Turtle
-              value: turtle
-            - text: Twig
-              value: twig
-            - text: TypeScript
-              value: typescript
-            - text: TypoScript
-              value: typoscript
-            - text: UnrealScript
-              value: unrealscript
-            - text: UO Razor Script
-              value: uorazor
-            - text: URI
-              value: uri
-            - text: V
-              value: v
-            - text: Vala
-              value: vala
-            - text: VB.Net
-              value: vbnet
-            - text: Velocity
-              value: velocity
-            - text: Verilog
-              value: verilog
-            - text: VHDL
-              value: vhdl
-            - text: vim
-              value: vim
-            - text: Visual Basic
-              value: visual-basic
-            - text: WarpScript
-              value: warpscript
-            - text: WebAssembly
-              value: wasm
-            - text: Web IDL
-              value: web-idl
-            - text: WGSL
-              value: wgsl
-            - text: Wiki markup
-              value: wiki
-            - text: Wolfram language
-              value: wolfram
-            - text: Wren
-              value: wren
-            - text: Xeora
-              value: xeora
-            - text: XML doc (.net)
-              value: xml-doc
-            - text: Xojo (REALbasic)
-              value: xojo
-            - text: XQuery
-              value: xquery
-            - text: YAML
-              value: yaml
-            - text: YANG
-              value: yang
-            - text: Zig
-              value: zig
+            - name: Markup
+              id: markup
+            - name: CSS
+              id: css
+            - name: C-like
+              id: clike
+            - name: JavaScript
+              id: javascript
+            - name: ABAP
+              id: abap
+            - name: ABNF
+              id: abnf
+            - name: ActionScript
+              id: actionscript
+            - name: Ada
+              id: ada
+            - name: Agda
+              id: agda
+            - name: AL
+              id: al
+            - name: ANTLR4
+              id: antlr4
+            - name: Apache Configuration
+              id: apacheconf
+            - name: Apex
+              id: apex
+            - name: APL
+              id: apl
+            - name: AppleScript
+              id: applescript
+            - name: AQL
+              id: aql
+            - name: Arduino
+              id: arduino
+            - name: ARFF
+              id: arff
+            - name: ARM Assembly
+              id: armasm
+            - name: Arturo
+              id: arturo
+            - name: AsciiDoc
+              id: asciidoc
+            - name: ASP.NET (C#)
+              id: aspnet
+            - name: 6502 Assembly
+              id: asm6502
+            - name: Atmel AVR Assembly
+              id: asmatmel
+            - name: AutoHotkey
+              id: autohotkey
+            - name: AutoIt
+              id: autoit
+            - name: AviSynth
+              id: avisynth
+            - name: Avro IDL
+              id: avro-idl
+            - name: AWK
+              id: awk
+            - name: Bash
+              id: bash
+            - name: BASIC
+              id: basic
+            - name: Batch
+              id: batch
+            - name: BBcode
+              id: bbcode
+            - name: BBj
+              id: bbj
+            - name: Bicep
+              id: bicep
+            - name: Birb
+              id: birb
+            - name: Bison
+              id: bison
+            - name: BNF
+              id: bnf
+            - name: BQN
+              id: bqn
+            - name: Brainfuck
+              id: brainfuck
+            - name: BrightScript
+              id: brightscript
+            - name: Bro
+              id: bro
+            - name: BSL (1C:Enterprise)
+              id: bsl
+            - name: C
+              id: c
+            - name: C#
+              id: csharp
+            - name: C++
+              id: cpp
+            - name: CFScript
+              id: cfscript
+            - name: ChaiScript
+              id: chaiscript
+            - name: CIL
+              id: cil
+            - name: Cilk/C
+              id: cilkc
+            - name: Cilk/C++
+              id: cilkcpp
+            - name: Clojure
+              id: clojure
+            - name: CMake
+              id: cmake
+            - name: COBOL
+              id: cobol
+            - name: CoffeeScript
+              id: coffeescript
+            - name: Concurnas
+              id: concurnas
+            - name: Content-Security-Policy
+              id: csp
+            - name: Cooklang
+              id: cooklang
+            - name: Coq
+              id: coq
+            - name: Crystal
+              id: crystal
+            - name: CSS Extras
+              id: css-extras
+            - name: CSV
+              id: csv
+            - name: CUE
+              id: cue
+            - name: Cypher
+              id: cypher
+            - name: D
+              id: d
+            - name: Dart
+              id: dart
+            - name: DataWeave
+              id: dataweave
+            - name: DAX
+              id: dax
+            - name: Dhall
+              id: dhall
+            - name: Diff
+              id: diff
+            - name: Django/Jinja2
+              id: django
+            - name: DNS zone file
+              id: dns-zone-file
+            - name: Docker
+              id: docker
+            - name: DOT (Graphviz)
+              id: dot
+            - name: EBNF
+              id: ebnf
+            - name: EditorConfig
+              id: editorconfig
+            - name: Eiffel
+              id: eiffel
+            - name: EJS
+              id: ejs
+            - name: Elixir
+              id: elixir
+            - name: Elm
+              id: elm
+            - name: Embedded Lua templating
+              id: etlua
+            - name: ERB
+              id: erb
+            - name: Erlang
+              id: erlang
+            - name: Excel Formula
+              id: excel-formula
+            - name: F#
+              id: fsharp
+            - name: Factor
+              id: factor
+            - name: "False"
+              id: "false"
+            - name: Firestore security rules
+              id: firestore-security-rules
+            - name: Flow
+              id: flow
+            - name: Fortran
+              id: fortran
+            - name: FreeMarker Template Language
+              id: ftl
+            - name: GameMaker Language
+              id: gml
+            - name: GAP (CAS)
+              id: gap
+            - name: G-code
+              id: gcode
+            - name: GDScript
+              id: gdscript
+            - name: GEDCOM
+              id: gedcom
+            - name: gettext
+              id: gettext
+            - name: Gherkin
+              id: gherkin
+            - name: Git
+              id: git
+            - name: GLSL
+              id: glsl
+            - name: GN
+              id: gn
+            - name: GNU Linker Script
+              id: linker-script
+            - name: Go
+              id: go
+            - name: Go module
+              id: go-module
+            - name: Gradle
+              id: gradle
+            - name: GraphQL
+              id: graphql
+            - name: Groovy
+              id: groovy
+            - name: Haml
+              id: haml
+            - name: Handlebars
+              id: handlebars
+            - name: Haskell
+              id: haskell
+            - name: Haxe
+              id: haxe
+            - name: HCL
+              id: hcl
+            - name: HLSL
+              id: hlsl
+            - name: Hoon
+              id: hoon
+            - name: HTTP
+              id: http
+            - name: HTTP Public-Key-Pins
+              id: hpkp
+            - name: HTTP Strict-Transport-Security
+              id: hsts
+            - name: IchigoJam
+              id: ichigojam
+            - name: Icon
+              id: icon
+            - name: ICU Message Format
+              id: icu-message-format
+            - name: Idris
+              id: idris
+            - name: .ignore
+              id: ignore
+            - name: Inform 7
+              id: inform7
+            - name: Ini
+              id: ini
+            - name: Io
+              id: io
+            - name: J
+              id: j
+            - name: Java
+              id: java
+            - name: JavaDoc
+              id: javadoc
+            - name: JavaDoc-like
+              id: javadoclike
+            - name: Java stack trace
+              id: javastacktrace
+            - name: Jexl
+              id: jexl
+            - name: Jolie
+              id: jolie
+            - name: JQ
+              id: jq
+            - name: JSDoc
+              id: jsdoc
+            - name: JS Extras
+              id: js-extras
+            - name: JSON
+              id: json
+            - name: JSON5
+              id: json5
+            - name: JSONP
+              id: jsonp
+            - name: JS stack trace
+              id: jsstacktrace
+            - name: JS Templates
+              id: js-templates
+            - name: Julia
+              id: julia
+            - name: Keepalived Configure
+              id: keepalived
+            - name: Keyman
+              id: keyman
+            - name: Kotlin
+              id: kotlin
+            - name: KuMir (КуМир)
+              id: kumir
+            - name: Kusto
+              id: kusto
+            - name: LaTeX
+              id: latex
+            - name: Latte
+              id: latte
+            - name: Less
+              id: less
+            - name: LilyPond
+              id: lilypond
+            - name: Liquid
+              id: liquid
+            - name: Lisp
+              id: lisp
+            - name: LiveScript
+              id: livescript
+            - name: LLVM IR
+              id: llvm
+            - name: Log file
+              id: log
+            - name: LOLCODE
+              id: lolcode
+            - name: Lua
+              id: lua
+            - name: Magma (CAS)
+              id: magma
+            - name: Makefile
+              id: makefile
+            - name: Markdown
+              id: markdown
+            - name: Markup templating
+              id: markup-templating
+            - name: Mata
+              id: mata
+            - name: MATLAB
+              id: matlab
+            - name: MAXScript
+              id: maxscript
+            - name: MEL
+              id: mel
+            - name: Mermaid
+              id: mermaid
+            - name: METAFONT
+              id: metafont
+            - name: Mizar
+              id: mizar
+            - name: MongoDB
+              id: mongodb
+            - name: Monkey
+              id: monkey
+            - name: MoonScript
+              id: moonscript
+            - name: N1QL
+              id: n1ql
+            - name: N4JS
+              id: n4js
+            - name: Nand To Tetris HDL
+              id: nand2tetris-hdl
+            - name: Naninovel Script
+              id: naniscript
+            - name: NASM
+              id: nasm
+            - name: NEON
+              id: neon
+            - name: Nevod
+              id: nevod
+            - name: nginx
+              id: nginx
+            - name: Nim
+              id: nim
+            - name: Nix
+              id: nix
+            - name: NSIS
+              id: nsis
+            - name: Objective-C
+              id: objectivec
+            - name: OCaml
+              id: ocaml
+            - name: Odin
+              id: odin
+            - name: OpenCL
+              id: opencl
+            - name: OpenQasm
+              id: openqasm
+            - name: Oz
+              id: oz
+            - name: PARI/GP
+              id: parigp
+            - name: Pascal
+              id: pascal
+            - name: Pascaligo
+              id: pascaligo
+            - name: PATROL Scripting Language
+              id: psl
+            - name: PC-Axis
+              id: pcaxis
+            - name: PeopleCode
+              id: peoplecode
+            - name: Perl
+              id: perl
+            - name: PHP
+              id: php
+            - name: PHPDoc
+              id: phpdoc
+            - name: PHP Extras
+              id: php-extras
+            - name: PlantUML
+              id: plant-uml
+            - name: PL/SQL
+              id: plsql
+            - name: PowerQuery
+              id: powerquery
+            - name: PowerShell
+              id: powershell
+            - name: Processing
+              id: processing
+            - name: Prolog
+              id: prolog
+            - name: PromQL
+              id: promql
+            - name: .properties
+              id: properties
+            - name: Protocol Buffers
+              id: protobuf
+            - name: Pug
+              id: pug
+            - name: Puppet
+              id: puppet
+            - name: Pure
+              id: pure
+            - name: PureBasic
+              id: purebasic
+            - name: PureScript
+              id: purescript
+            - name: Python
+              id: python
+            - name: Q#
+              id: qsharp
+            - name: Q (kdb+ database)
+              id: q
+            - name: QML
+              id: qml
+            - name: Qore
+              id: qore
+            - name: R
+              id: r
+            - name: Racket
+              id: racket
+            - name: Razor C#
+              id: cshtml
+            - name: React JSX
+              id: jsx
+            - name: React TSX
+              id: tsx
+            - name: Reason
+              id: reason
+            - name: Regex
+              id: regex
+            - name: Rego
+              id: rego
+            - name: Ren'py
+              id: renpy
+            - name: ReScript
+              id: rescript
+            - name: reST (reStructuredText)
+              id: rest
+            - name: Rip
+              id: rip
+            - name: Roboconf
+              id: roboconf
+            - name: Robot Framework
+              id: robotframework
+            - name: Ruby
+              id: ruby
+            - name: Rust
+              id: rust
+            - name: SAS
+              id: sas
+            - name: Sass (Sass)
+              id: sass
+            - name: Sass (SCSS)
+              id: scss
+            - name: Scala
+              id: scala
+            - name: Scheme
+              id: scheme
+            - name: Shell session
+              id: shell-session
+            - name: Smali
+              id: smali
+            - name: Smalltalk
+              id: smalltalk
+            - name: Smarty
+              id: smarty
+            - name: SML
+              id: sml
+            - name: Solidity (Ethereum)
+              id: solidity
+            - name: Solution file
+              id: solution-file
+            - name: Soy (Closure Template)
+              id: soy
+            - name: SPARQL
+              id: sparql
+            - name: Splunk SPL
+              id: splunk-spl
+            - name: "SQF: Status Quo Function (Arma 3)"
+              id: sqf
+            - name: SQL
+              id: sql
+            - name: Squirrel
+              id: squirrel
+            - name: Stan
+              id: stan
+            - name: Stata Ado
+              id: stata
+            - name: Structured Text (IEC 61131-3)
+              id: iecst
+            - name: Stylus
+              id: stylus
+            - name: SuperCollider
+              id: supercollider
+            - name: Swift
+              id: swift
+            - name: Systemd configuration file
+              id: systemd
+            - name: T4 templating
+              id: t4-templating
+            - name: T4 Text Templates (C#)
+              id: t4-cs
+            - name: T4 Text Templates (VB)
+              id: t4-vb
+            - name: TAP
+              id: tap
+            - name: Tcl
+              id: tcl
+            - name: Template Toolkit 2
+              id: tt2
+            - name: Textile
+              id: textile
+            - name: TOML
+              id: toml
+            - name: Tremor
+              id: tremor
+            - name: Turtle
+              id: turtle
+            - name: Twig
+              id: twig
+            - name: TypeScript
+              id: typescript
+            - name: TypoScript
+              id: typoscript
+            - name: UnrealScript
+              id: unrealscript
+            - name: UO Razor Script
+              id: uorazor
+            - name: URI
+              id: uri
+            - name: V
+              id: v
+            - name: Vala
+              id: vala
+            - name: VB.Net
+              id: vbnet
+            - name: Velocity
+              id: velocity
+            - name: Verilog
+              id: verilog
+            - name: VHDL
+              id: vhdl
+            - name: vim
+              id: vim
+            - name: Visual Basic
+              id: visual-basic
+            - name: WarpScript
+              id: warpscript
+            - name: WebAssembly
+              id: wasm
+            - name: Web IDL
+              id: web-idl
+            - name: WGSL
+              id: wgsl
+            - name: Wiki markup
+              id: wiki
+            - name: Wolfram language
+              id: wolfram
+            - name: Wren
+              id: wren
+            - name: Xeora
+              id: xeora
+            - name: XML doc (.net)
+              id: xml-doc
+            - name: Xojo (REALbasic)
+              id: xojo
+            - name: XQuery
+              id: xquery
+            - name: YAML
+              id: yaml
+            - name: YANG
+              id: yang
+            - name: Zig
+              id: zig
 
   alert:
     template: mdx_component
