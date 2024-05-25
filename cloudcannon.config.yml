@@ -283,6 +283,43 @@ generator:
 _snippets_imports:
   mdx: true
 _snippets:
+  code_block: 
+    template: mdx_component
+    inline: false
+    preview:
+      text: Code Block
+    definitions:
+      component_name: SnippetsCodeBlock
+      named_args:
+        - editor_key: code
+          source_key: code
+          type: string
+        - editor_key: language
+          source_key: language
+          type: string
+        - editor_key: isWrapped
+          source_key: isWrapped
+          type: boolean
+        - editor_key: isInline
+          source_key: isInline
+          type: boolean
+    _inputs:
+      code:
+        type: textarea
+      lang:
+        type: select
+        options:
+          values:
+            - text: HTML
+              value: html
+            - text: CSS
+              value: css
+            - text: JavaScript
+              value: javascript
+      isWrapped:
+        type: boolean
+      isInline:
+        type: boolean
   alert:
     template: mdx_component
     inline: false

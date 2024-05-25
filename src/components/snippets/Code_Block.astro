@@ -1,0 +1,12 @@
+---
+import { Code } from "astro:components";
+
+const { code, lang, isInline, isWrapped } = props;
+---
+
+<Code
+  code={code}
+  lang={lang}
+  {...isInline ? { inline: true } : {}}
+  {...isWrapped ? { wrap: true } : {}}
+/>
