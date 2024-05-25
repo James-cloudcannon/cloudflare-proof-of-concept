@@ -1,0 +1,51 @@
+---
+import "./_featured_reports.scss";
+const { content, style } = Astro.props;
+const { heading, reports, background_image } = content;
+
+const themeClass =
+  style.theme === "Dark"
+    ? "background-color: #000; color: #fff;"
+    : "background-color: #fff; color: #222;";
+---
+
+<div
+  class="featured-reports"
+  style={`background-image: url(${background_image}); ${themeClass}`}
+>
+  <div class="featured-reports__container">
+    <div class="featured-reports__content">
+      <div class="featured-reports__header">
+        <h3 class="featured-reports__heading">{heading}</h3>
+      </div>
+      <div class="featured-reports__body">
+        {
+          reports.map((report, index) => (
+            <div class="featured-reports__report" key={index}>
+              <div class="featured-reports__report-container">
+                <div class="featured-reports__image-wrapper">
+                  <img
+                    class="featured-reports__image"
+                    src={report.image.image_path}
+                    alt={report.image.image_alt}
+                  />
+                </div>
+                <h5 class="featured-reports__report-heading">
+                  {report.heading}
+                </h5>
+                <div class="featured-reports__text-container">
+                  <p class="featured-reports__text">{report.text}</p>
+                </div>
+                <div class="featured-reports__link-container">
+                  <a href={report.link.url} class="featured-reports__link">
+                    {report.link.text}
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>

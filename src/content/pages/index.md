@@ -82,5 +82,45 @@ content_blocks:
           link: https://www.cloudflare.com/en-gb/plans/enterprise/contact/
     style: 
       theme: Light
+  - _bookshop_name: sections/featured_reports
+    content:
+      heading: What analysts say
+      reports:
+        - heading: Cloudflare named in 2024 Gartner® Magic Quadrant™ for Security Service Edge (SSE)
+          image:
+            image_path: "https://cf-assets.www.cloudflare.com/slt3lc6tev37/2EpMDcOzRGz0qkeQbuOoB1/647e0c54d93967efd46237dec01b149d/gartner.svg"
+            image_alt: "Gartner logo"
+          text: >-
+            We believe this recognition is a testament to Cloudflare’s
+            single-vendor SASE platform and its ability to modernize
+            your network and consolidate more use cases.
+          link: 
+            text: Read the report
+            url: /en-gb/lp/gartner-magic-quadrant-sse-2024/
+        - heading: >-
+            Cloudflare a Strong Performer in The Forrester Wave™:
+            Security Service Edge Solutions, Q1 2024
+          image:
+            image_path: https://cf-assets.www.cloudflare.com/slt3lc6tev37/1AdmvEGP1Nssxe3RI0j9Fl/d35e24c62136bae8429dfd43805ad832/forester.svg
+            image_alt: "Forrester logo"
+          text: >-
+            Cloudflare received the highest score in the global network
+            criterion among SSE vendors in the Forrester report.
+          link: 
+            text: Read the report
+            url: /en-gb/lp/forrester-wave-sse-2024/
+        - heading: "Cloudflare a Leader in 2023 IDC MarketScape: Zero Trust Network Access"
+          image:
+            image_path: https://cf-assets.www.cloudflare.com/slt3lc6tev37/62y2LOw1pScTM3Nyy6mM8j/e74f4d41a003a796b26dfdcd30448372/idc.svg
+            image_alt: "IDC logo"
+          text: >-
+            IDC cites Cloudflare's "aggressive product strategy to
+            support enterprise security needs."
+          link: 
+            text: Read the report
+            url: /en-gb/lp/idc-marketscape-ztna-2023/
+      background_image: ""
+    style: 
+      theme: Light
     
 ---

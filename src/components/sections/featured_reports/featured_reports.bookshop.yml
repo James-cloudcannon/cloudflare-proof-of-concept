@@ -1,0 +1,46 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Featured Reviews
+  description: Featured solutions with text, logos and links
+  icon: 'chrome_reader_mode'
+  tags:
+    - Text
+    - Image
+    - Links
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  content:
+    heading: ""
+    reports:
+      - heading: ""
+        image: 
+          image_path: ""
+          image_alt: ""
+        text: ""
+        link: 
+          text: ""
+          url: ""
+    background_image: ""
+  style: 
+    theme: Light
+  
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  reports: 
+    comment: "Limit: 3 items"
+  heading: 
+    type: textarea 
+  theme:
+    type: select 
+    options:  
+      values: 
+        - Dark 
+        - Light
