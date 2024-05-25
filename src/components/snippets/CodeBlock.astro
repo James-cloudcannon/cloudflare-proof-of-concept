@@ -1,0 +1,11 @@
+---
+import hljs from 'highlight.js';
+
+const { code, lang } = Astro.props;
+
+const highlightedCode = hljs.highlight(code, { language: lang }).value;
+---
+
+<Fragment>
+  <pre><code class={`hljs ${lang}`} set:html={highlightedCode}></code></pre>
+</Fragment>

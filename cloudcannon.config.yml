@@ -289,7 +289,7 @@ _snippets:
     preview:
       text: Code Block
     definitions:
-      component_name: SnippetsCodeBlock
+      component_name: CodeBlock
       named_args:
         - editor_key: code
           source_key: code

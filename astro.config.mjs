@@ -12,7 +12,7 @@ export default defineConfig({
   site: "https://tiny-jackal.cloudvent.net/",
   integrations: [
     AutoImport({
-      imports: ["src/components/snippets/SnippetsCodeBlock.astro"],
+      imports: ["src/components/snippets/CodeBlock.astro"],
     }),
     react(),
     tailwind(),
