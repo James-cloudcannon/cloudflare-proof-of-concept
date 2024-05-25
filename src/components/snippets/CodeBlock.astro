@@ -1,6 +1,6 @@
 ---
 
-const { code, lang } = Astro.props;
+const { code, language } = Astro.props;
 let innerContent = await Astro.slots.render("default")
 
 
@@ -10,8 +10,8 @@ innerContent = innerContent.replaceAll("&quot;",`"`)
 							.replaceAll("&lt;","<")
 							.replaceAll("&gt;",">")
 
-let html = `<div class="highlight hljs language-${lang}">`;
-html += "```"+lang+"\n"+innerContent+"\n```";
+let html = `<div class="highlight hljs language-${language}">`;
+html += "```"+language+"\n"+innerContent+"\n```";
 html += `</div>`;
 
 
