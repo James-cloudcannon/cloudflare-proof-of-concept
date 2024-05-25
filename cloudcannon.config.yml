@@ -299,7 +299,7 @@ _snippets:
           type: string
     _inputs:
       code:
-        type: textarea
+        type: code
       lang:
         type: select
         options:
