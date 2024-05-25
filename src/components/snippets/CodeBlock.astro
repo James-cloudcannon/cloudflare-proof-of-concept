@@ -1,16 +1,21 @@
 ---
-import { Prism } from '@astrojs/prism';
-import escapeHTML from 'escape-html';
 
 const { code, lang } = Astro.props;
+let innerContent = await Astro.slots.render("default")
 
-const escapedCode = escapeHTML(code);
+
+innerContent = innerContent.replaceAll("&quot;",`"`)
+							.replaceAll("&amp;","&")
+							.replaceAll("&#39;","'")
+							.replaceAll("&lt;","<")
+							.replaceAll("&gt;",">")
+
+let html = `<div class="highlight hljs language-${lang}">`;
+html += "```"+lang+"\n"+innerContent+"\n```";
+html += `</div>`;
+
+
 
 ---
 
-<figure class={`hljs code-block language-${lang}`}>
-    <Prism
-        code={escapedCode}
-        lang={lang}
-    />
-</figure>
+<Fragment set:html={html} />

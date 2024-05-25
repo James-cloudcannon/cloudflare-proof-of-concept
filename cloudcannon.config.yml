@@ -283,11 +283,15 @@ generator:
 _snippets_imports:
   mdx: true
 _snippets:
-  code_block: 
-    template: mdx_component
+  code_block:
+    snippet: "<Code_Block lang=[[language]]>{`[[inner]]`}</Code_Block>"
     inline: false
     preview:
-      text: Code Block
+      text: 
+        - temaplte: Code Block
+      subtext: 
+        - key: content
+      icon: code
     definitions:
       component_name: CodeBlock
       named_args:
@@ -297,10 +301,27 @@ _snippets:
         - editor_key: lang
           source_key: lang
           type: string
+    params: 
+      language: 
+        parser: argument
+        options: 
+          model: 
+            editor_key: language
+            type: string
+          style: 
+            output: inline 
+      inner: 
+        parser: content
+        options:
+          editor_key: content 
+          allowed_nested: false
+          trim_text: true 
+          forbidden_tokens:
+            - "```"
     _inputs:
-      code:
+      content:
         type: code
-      lang:
+      language:
         type: select
         options:
           values:
