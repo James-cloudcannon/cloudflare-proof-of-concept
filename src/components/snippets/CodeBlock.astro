@@ -1,20 +1,17 @@
 ---
 import { Prism } from '@astrojs/prism';
 
+const { code, lang } = Astro.props;
 
-const {
-    code,
-    lang,
-} = Astro.props;
+const escapeQuotes = (str) => str.replace(/"/g, '\\"').replace(/'/g, "\\'");
 
+const escapedCode = escapeQuotes(code);
 
 ---
 
 <figure class={`hljs code-block language-${lang}`}>
     <Prism
-        code={`${code}`}
+        code={escapedCode}
         lang={lang}
     />
-
 </figure>
-
