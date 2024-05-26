@@ -1,0 +1,33 @@
+---
+import "./_CTA_Block.scss";
+const { content, style } = Astro.props;
+const { heading, link, background_image } = content;
+
+const themeClass =
+  style.theme === "Dark"
+    ? "background-color: #000; color: #fff;"
+    : "background-color: #fff; color: #222;";
+
+---
+
+<div class="cta-block" id="test-staging-lead-generation" style={`background-image: url(${background_image}); ${themeClass}`}>
+  <div class="cta-block__container">
+    <div class="cta-block__row">
+      <div class="cta-block__col">
+        <div class="cta-block__content" style={themeClass}>
+          <h2 class="cta-block__heading">{heading}</h2>
+          <div class="cta-block__link-wrapper">
+            <a 
+              href={link.url} 
+              class="cta-block__link" 
+              tabindex="0" 
+              role="button" 
+            >
+              {link.text}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

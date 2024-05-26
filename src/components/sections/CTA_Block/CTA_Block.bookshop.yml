@@ -1,0 +1,39 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: CTA Block
+  description: Call to action block with heading, background image and link
+  icon: 'chrome_reader_mode'
+  tags:
+    - Text
+    - Link
+    - CTA
+
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  content: 
+    heading: ""
+    link: 
+      text: ""
+      url: ""
+    background_image: ""
+  style: 
+    theme: Light
+  
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  heading: 
+    type: textarea 
+  theme:
+    type: select 
+    options:  
+      values: 
+        - Dark 
+        - Light

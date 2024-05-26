@@ -1,0 +1,104 @@
+.cta-block {
+    background-color: #fff;
+    color: #222;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  
+    &__container {
+      margin: 0 auto;
+      max-width: 100%;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+  
+      @media screen and (min-width: 62rem) {
+        max-width: 70.438rem;
+        padding-left: 0;
+        padding-right: 0;
+      }
+  
+      @media screen and (min-width: 992px) and (max-width: 1191px) {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+      }
+  
+      @media screen and (min-width: 75rem) {
+        max-width: 70.5rem;
+      }
+    }
+  
+    &__row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -1.125rem;
+      margin-right: -1.125rem;
+      justify-content: center;
+    }
+  
+    &__col {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+      padding-left: 1.125rem;
+      padding-right: 1.125rem;
+      position: relative;
+      width: 100%;
+    }
+  
+    &__content {
+      border-radius: 0.5rem;
+      padding: 4rem 1.5rem;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      background-color: inherit;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+  
+      @media screen and (min-width: 36rem) {
+        padding-left: 7.5rem;
+        padding-right: 7.5rem;
+      }
+    }
+  
+    &__heading {
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 2.5rem;
+      margin-bottom: 0;
+      margin-top: 0;
+      max-width: 32ch;
+      text-align: center;
+  
+      @media screen and (min-width: 36rem) {
+        font-size: 2.5rem;
+        line-height: 2.8125rem;
+      }
+    }
+  
+    &__link-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+  
+    &__link {
+      align-items: center;
+      border-radius: 0.5rem;
+      display: flex;
+      justify-content: center;
+      max-width: 100%;
+      font-weight: 500;
+      letter-spacing: -0.02rem;
+      width: auto;
+      text-align: center;
+      padding: 0.75rem 2.5rem;
+      font-size: 0.875rem;
+      text-decoration: none;
+      background-color: #f63;
+  
+      &:hover {
+        background-color: #f6821f;
+      }
+    }
+  }
+  

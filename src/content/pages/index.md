@@ -159,5 +159,14 @@ content_blocks:
     style: 
       theme: Light
       reverse_order: false 
+  - _bookshop_name: sections/CTA_Block
+    content: 
+      heading: Contact a Cloudflare enterprise representative
+      link: 
+        text: Get in touch
+        url: https://www.cloudflare.com/en-gb/plans/enterprise/contact/
+      background_image: https://cf-assets.www.cloudflare.com/slt3lc6tev37/6wvLylL1UDvEfh7N5WBd32/44ff9093b6aa1feb33d12d020ce756df/Generic_Orange_Background.jpeg
+    style: 
+      theme: Light 
     
 ---
