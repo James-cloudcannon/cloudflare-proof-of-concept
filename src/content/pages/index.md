@@ -90,6 +90,8 @@ content_blocks:
           image:
             image_path: "https://cf-assets.www.cloudflare.com/slt3lc6tev37/2EpMDcOzRGz0qkeQbuOoB1/647e0c54d93967efd46237dec01b149d/gartner.svg"
             image_alt: "Gartner logo"
+          video:
+            video_path: ""
           text: >-
             We believe this recognition is a testament to Cloudflare’s
             single-vendor SASE platform and its ability to modernize
@@ -103,6 +105,8 @@ content_blocks:
           image:
             image_path: https://cf-assets.www.cloudflare.com/slt3lc6tev37/1AdmvEGP1Nssxe3RI0j9Fl/d35e24c62136bae8429dfd43805ad832/forester.svg
             image_alt: "Forrester logo"
+          video:
+            video_path: ""
           text: >-
             Cloudflare received the highest score in the global network
             criterion among SSE vendors in the Forrester report.
@@ -113,6 +117,8 @@ content_blocks:
           image:
             image_path: https://cf-assets.www.cloudflare.com/slt3lc6tev37/62y2LOw1pScTM3Nyy6mM8j/e74f4d41a003a796b26dfdcd30448372/idc.svg
             image_alt: "IDC logo"
+          video:
+            video_path: ""
           text: >-
             IDC cites Cloudflare's "aggressive product strategy to
             support enterprise security needs."
