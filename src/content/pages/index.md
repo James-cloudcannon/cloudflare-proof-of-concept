@@ -122,5 +122,27 @@ content_blocks:
       background_image: ""
     style: 
       theme: Light
+  - _bookshop_name: sections/featured_resources
+    content:
+      heading: "Resources for technology leaders"
+      subheading: "Accelerate your IT and security strategy with curated insights and solutions"
+      resources:
+        - heading: "For CISOs"
+          text: "Improve cyber resilience to control risk and preserve customer trust."
+          link: 
+            text: "Explore"
+            url: "/ciso"
+        - heading: "For CIOs"
+          text: "Accelerate digital transformation for better efficiency and faster growth."
+          link: 
+            text: "Explore"
+            url: "/cio"
+        - heading: "For CTOs"
+          text: "Deliver better software faster while fostering a culture of innovation."
+          link: 
+            text: "Explore"
+            url: "/cto"
+    style: 
+      theme: Light 
     
 ---

@@ -1,0 +1,47 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Featured Resources
+  description: Featured Card list with text and links
+  icon: 'chrome_reader_mode'
+  tags:
+    - Text
+    - Links
+    - Resources
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  content:
+    heading: ""
+    subheading: ""
+    resources:
+      - heading: ""
+        text: ""
+        link: 
+          text: ""
+          url: ""
+  style: 
+    theme: Light
+  
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  reports: 
+    comment: "Limit: 3 items"
+  heading: 
+    type: textarea 
+  subheading:
+    type: textarea
+  text: 
+    type: textarea
+  theme:
+    type: select 
+    options:  
+      values: 
+        - Dark 
+        - Light

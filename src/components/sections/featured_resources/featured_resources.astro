@@ -1,0 +1,31 @@
+---
+import "./_featured_resources.scss";
+const { content, style } = Astro.props;
+const { heading, subheading, resources } = content; 
+
+const themeClass =
+  style.theme === "Dark"
+    ? "background-color: #000; color: #fff;"
+    : "background-color: #fff; color: #222;";
+---
+
+<div class="featured-resources" style={themeClass}>
+  <div class="featured-resources__header">
+    <h3 class="featured-resources__heading">{heading}</h3>
+    <p class="featured-resources__subheading">{subheading}</p>
+  </div>
+  
+  <div class="featured-resources__body">
+    {resources && resources.map((resource, index) => (
+      <div class="featured-resources__resource">
+        <div class="featured-resources__resource-container">
+          <div class="featured-resources__resource-title">{resource.heading}</div>
+          <div class="featured-resources__resource-description">{resource.text}</div>
+          <div class="featured-resources__resource-link-container">
+            <a class="featured-resources__resource-link" href={resource.link.url}>{resource.link.text}</a>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
