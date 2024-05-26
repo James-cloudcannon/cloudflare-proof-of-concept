@@ -2,6 +2,7 @@ paths:
   uploads: public/uploads
   static: public
   data: data
+  assets: public
 collections_config:
   pages:
     path: src/content/pages
