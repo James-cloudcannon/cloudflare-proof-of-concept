@@ -17,6 +17,8 @@ blueprint:
     heading: ""
     reports:
       - heading: ""
+        video: 
+          video_path: ""
         image: 
           image_path: ""
           image_alt: ""
@@ -24,7 +26,6 @@ blueprint:
         link: 
           text: ""
           url: ""
-    background_image: ""
   style: 
     theme: Light
   

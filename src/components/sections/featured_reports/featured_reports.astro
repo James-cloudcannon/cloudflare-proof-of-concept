@@ -11,18 +11,20 @@ const themeClass =
 
 <div
   class="featured-reports"
-  style={`background-image: url(${background_image}); ${themeClass}`}
+  style={themeClass}
 >
   <div class="featured-reports__container">
     <div class="featured-reports__content">
-      <div class="featured-reports__header">
-        <h3 class="featured-reports__heading">{heading}</h3>
-      </div>
+      {heading && (
+        <div class="featured-reports__header">
+          <h3 class="featured-reports__heading">{heading}</h3>
+        </div>
+      )}
       <div class="featured-reports__body">
-        {
-          reports.map((report, index) => (
-            <div class="featured-reports__report" key={index}>
-              <div class="featured-reports__report-container">
+        {reports.map((report, index) => (
+          <div class="featured-reports__report" key={index}>
+            <div class="featured-reports__report-container">
+              {report.image && (
                 <div class="featured-reports__image-wrapper">
                   <img
                     class="featured-reports__image"
@@ -30,21 +32,45 @@ const themeClass =
                     alt={report.image.image_alt}
                   />
                 </div>
+              )}
+              {report.video && (
+                <div class="featured-reports__video-wrapper">
+                  <div class="lazyload-wrapper">
+                    <div>
+                      <div
+                        class="featured-reports__video-container"
+                      >
+                        <iframe
+                          src={report.video.video_path}
+                          frameborder="0"
+                          allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {report.heading && (
                 <h5 class="featured-reports__report-heading">
                   {report.heading}
                 </h5>
+              )}
+              {report.text && (
                 <div class="featured-reports__text-container">
                   <p class="featured-reports__text">{report.text}</p>
                 </div>
+              )}
+              {report.link && (
                 <div class="featured-reports__link-container">
                   <a href={report.link.url} class="featured-reports__link">
                     {report.link.text}
                   </a>
                 </div>
-              </div>
+              )}
             </div>
-          ))
-        }
+          </div>
+        ))}
       </div>
     </div>
   </div>

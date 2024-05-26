@@ -119,7 +119,6 @@ content_blocks:
           link: 
             text: Read the report
             url: /en-gb/lp/idc-marketscape-ztna-2023/
-      background_image: ""
     style: 
       theme: Light
   - _bookshop_name: sections/featured_resources
@@ -159,6 +158,42 @@ content_blocks:
     style: 
       theme: Light
       reverse_order: false 
+  - _bookshop_name: sections/featured_reports
+    content:
+      heading: See how leading enterprises regain control with Cloudflare
+      reports:
+        - image:
+            image_path: "https://cf-assets.www.cloudflare.com/slt3lc6tev37/6tIRWGdanbxYwC3qKrRzi2/83da524691501a73abd23fb4e72c2ee6/POI_Informatik_Logo_800_schwarz_px__2_.png"
+            image_alt: ""
+          video: 
+            video_path: https://iframe.cloudflarestream.com/49e76662785a4a41cc2a905af3703b38?poster=https%3A%2F%2Fcf-assets.www.cloudflare.com%2Fslt3lc6tev37%2F6vZgJjE7OFLINDHPAGZ3PJ%2F30ff0ceac9ad2088a52f4ad43ac473f0%2Fporsche_informatik_meta.png&defaultTextTrack=en&letterboxColor=transparent&preload=metadata
+          text: >-
+            Porsche Informatik relies on Cloudflare to manage traffic for its brand and dealer network, protect its websites from the internet, and automate cloud migration tasks
+          link: 
+            text: Read case study
+            url: https://www.cloudflare.com/en-gb/case-studies/porsche-informatik/
+        - image:
+            image_path: https://cf-assets.www.cloudflare.com/slt3lc6tev37/7dreyVsx0FLF3WjCQvWrVT/a9bb912272cd7f8bc9a294f768befde6/delivery-logo-horizontal-1.png
+            image_alt: ""
+          video: 
+            video_path: https://iframe.cloudflarestream.com/9c57b16986893553978e4140ea4c1c6c?poster=https%3A%2F%2Fcf-assets.www.cloudflare.com%2Fslt3lc6tev37%2F7a6m6bwj1zKlcQ7JHe2981%2Ffefe33b4f70020feb9afd168ea97c31c%2Fdeliveryhero_meta.png&defaultTextTrack=en&letterboxColor=transparent&preload=metadata
+          text: >-
+            Using Cloudflare as a single network entry point for its global operations, Delivery Hero reduced complexity, enhanced global network performance, and secured its international workforce and websites
+          link: 
+            text: Read case study
+            url: https://www.cloudflare.com/en-gb/case-studies/delivery-hero/
+        - image:
+            image_path: https://cf-assets.www.cloudflare.com/slt3lc6tev37/3Vjcj5r39nYQK9FAZ6tx1i/15048294cd989a6e460a61e56ad73d3e/PhonePe-horizontal-small2.png
+            image_alt: ""
+          video:
+            video_path: https://iframe.cloudflarestream.com/6a8da927b9682465f8b1ddf98550c1f1?poster=https%3A%2F%2Fcf-assets.www.cloudflare.com%2Fslt3lc6tev37%2F2Ro6ObLu3SaiPAtTogToip%2F29a7a96c2c6f3269ded783bca0c0f6ae%2Fphonepe_meta.png&defaultTextTrack=en&letterboxColor=transparent&preload=metadata
+          text: >-
+            PhonePe protects over 33 million merchants and provides a frictionless and low-latency customer experience to over 400 million registered users, using Cloudflare.
+          link: 
+            text: Read case study
+            url: https://www.cloudflare.com/en-gb/case-studies/phonepe/
+    style: 
+      theme: Light
   - _bookshop_name: sections/CTA_Block
     content: 
       heading: Contact a Cloudflare enterprise representative
@@ -168,5 +203,4 @@ content_blocks:
       background_image: https://cf-assets.www.cloudflare.com/slt3lc6tev37/6wvLylL1UDvEfh7N5WBd32/44ff9093b6aa1feb33d12d020ce756df/Generic_Orange_Background.jpeg
     style: 
       theme: Light 
-    
 ---
