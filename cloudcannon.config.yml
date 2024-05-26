@@ -304,6 +304,7 @@ _snippets:
       text: 
         - key: src 
         - 'Iframe'
+      icon: crop_original
     definitions:
       component_name: SnippetsIframe
       named_args:
@@ -325,6 +326,7 @@ _snippets:
       text: 
         - key: caption
         - Figure
+      icon: image
     definitions:
       component_name: Figure
       named_args:
@@ -359,14 +361,14 @@ _snippets:
               id: right
        
   code_block:
-    snippet: "<CodeBlock language=[[language]]>{`[[inner]]`}</CodeBlock>"
+    snippet: "<CodeBlock language=[[language]]>```{`[[inner]]`}````</CodeBlock>"
     inline: false
     preview:
       text:
       - template: CodeBlock ({language})
       - CodeBlock
       subtext:
-      - key: content
+        - key: content
       icon: code
     params:
       language:
