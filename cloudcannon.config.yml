@@ -361,7 +361,7 @@ _snippets:
               id: right
        
   code_block:
-    snippet: "<CodeBlock language=[[language]]>```[[language]]\n{`[[inner]]`}\n````</CodeBlock>"
+    snippet: "<CodeBlock lang=[[language]] code={`[[code]]`}/>"
     inline: false
     preview:
       text:
@@ -381,7 +381,7 @@ _snippets:
             ref: mdx_format
           style:
             output: inline
-      inner:
+      code:
         parser: content
         options:
           editor_key: content

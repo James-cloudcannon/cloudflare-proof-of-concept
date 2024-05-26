@@ -1,19 +1,13 @@
 ---
+import hljs from "highlight.js";
+const { lang, code } = Astro.props;
 
-const { code, language } = Astro.props;
-let innerContent = await Astro.slots.render("default")
 
+const highlighted = hljs.highlight(code, { language: lang }).value;
 
-innerContent = innerContent.replaceAll("&quot;",`"`)
-							.replaceAll("&amp;","&")
-							.replaceAll("&#39;","'")
-							.replaceAll("&lt;","<")
-							.replaceAll("&gt;",">")
+console.log(highlighted);
 
-let html = `<div class="highlight hljs language-${language}">`;
-html += "```"+language+"\n"+innerContent+"\n```";
-html += `</div>`;
-
+let html = `<pre><code class="hljs language-${lang}">${highlighted}</code></pre>`;
 
 ---
 
