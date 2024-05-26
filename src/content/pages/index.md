@@ -1,16 +1,16 @@
 ---
 _schema: page
-title: Home
+title: Connect, Protect and Build Everywhere | Cloudflare
 seo:
   page_description: >-
-    A starting point for developers looking to build a website with Astro, using
-    Bookshop components in CloudCannon. Create your own copy, and start creating
-    your own components to use in the CloudCannon CMS.
+    Make employees, applications and networks faster and more secure everywhere,
+    while reducing complexity and cost.
   canonical_url:
-  featured_image:
+  featured_image: >-
+    https://cf-assets.www.cloudflare.com/slt3lc6tev37/2FNnxFZOBEha1W2MhF44EN/e9438de558c983ccce8129ddc20e1b8b/CF_MetaImage_1200x628.png
   featured_image_alt:
   author_twitter_handle:
-  open_graph_type:
+  open_graph_type: website
   no_index: false
 content_blocks:
   - _bookshop_name: sections/full_height_hero
