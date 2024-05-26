@@ -51,31 +51,29 @@ const posts = await getCollection("blog");
         <p>{formattedDate}</p>
       </li>
       <ul class="blog-post__author">
-        {
-          author.map((authorName) => (
-            <li class="blog-post__author__item" key={authorName.name}>
+        {author.map((authorName) => (
+          <li class="blog-post__author__item" key={authorName.name}>
+            <a
+              href={`/author/${authorName.name.toLowerCase().replace(" ", "-")}`}
+              class="blog-post__author__avatar"
+            >
+              <img
+                src={authorName.avatar}
+                alt={authorName.name}
+                width="62"
+                height="62"
+              />
+            </a>
+            <div class="blog-post__author__name">
               <a
                 href={`/author/${authorName.name.toLowerCase().replace(" ", "-")}`}
-                class="blog-post__author__avatar"
+                class="blog-post__author__name__link"
               >
-                <img
-                  src={authorName.avatar}
-                  alt={authorName.name}
-                  width="62"
-                  height="62"
-                />
+                {authorName.name}
               </a>
-              <div class="blog-post__author__name">
-                <a
-                  href={`/author/${authorName.name.toLowerCase().replace(" ", "-")}`}
-                  class="blog-post__author__name__link"
-                >
-                  {authorName.name}
-                </a>
-              </div>
-            </li>
-          ))
-        }
+            </div>
+          </li>
+        ))}
       </ul>
       <div class="blog-post__size-wrapper">
         <p>{readingTime}<span> min read</span></p>
@@ -87,41 +85,42 @@ const posts = await getCollection("blog");
     <SocialButtons title={title} slug={slug} />
     <CloudflareTV />
     <section class="blog-post__tags">
-      {
-        tags.map((tag, i) => (
-          <a href={`/tags/${tag.toLowerCase()}`} key={i}>
-            {tag[0].toUpperCase() + tag.slice(1)}
-          </a>
-        ))
-      }
+      {tags.map((tag, i) => (
+        <a href={`/tags/${tag.toLowerCase()}`} key={i}>
+          {tag[0].toUpperCase() + tag.slice(1)}
+        </a>
+      ))}
     </section>
     <AuthorSocials author={author} />
-    {
-      (() => {
-        const relatedPosts = posts
-          .filter(
-            (post) =>
-              post.slug !== slug &&
-              post.data.tags.some((tag) => tags.includes(tag))
-          )
-          .map((post) => {
-            post.data.featured = false;
-            return post;
-          });
+    {(() => {
+      const relatedPosts = posts
+        .filter(
+          (post) =>
+            post.slug !== slug &&
+            post.data.tags.some((tag) => tags.includes(tag))
+        )
+        .map((post) => {
+          return {
+            ...post,
+            data: {
+              ...post.data,
+              featured: false,
+            },
+          };
+        });
 
-        return (
-          relatedPosts.length > 0 && (
-            <section class="blog-post__recent-posts">
-              <h2 class="blog-post__recent-title">Recent Posts</h2>
-              <div class="blog-post__recent-grid">
-                {relatedPosts.slice(0, 4).map((post) => (
-                  <RelatedPosts post={post} />
-                ))}
-              </div>
-            </section>
-          )
-        );
-      })()
-    }
+      return (
+        relatedPosts.length > 0 && (
+          <section class="blog-post__recent-posts">
+            <h2 class="blog-post__recent-title">Recent Posts</h2>
+            <div class="blog-post__recent-grid">
+              {relatedPosts.slice(0, 4).map((post) => (
+                <RelatedPosts post={post} />
+              ))}
+            </div>
+          </section>
+        )
+      );
+    })()}
   </main>
 </Layout>
