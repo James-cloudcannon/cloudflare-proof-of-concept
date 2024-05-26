@@ -323,7 +323,7 @@ _snippets:
       image_path: 
         type: image 
       alt: 
-        type: string
+        type: text
       caption:
         type: markdown 
       text_align:
