@@ -120,6 +120,29 @@ collection_groups:
       - data
 
 _inputs:
+  tags: 
+    type: multiselect
+    options: 
+      values: 
+        - "Developer Platform"
+        - "Developers"
+        - "API"
+        - "Integrations"
+        - "Webhooks"
+        - "Open Source"
+        - "Workers AI"
+        - "Cloudflare Radar"
+        - "Internet Traffic"
+        - "Outage"
+        - "Data Localization"
+        - "Observability"
+        - "Performance"
+        - "Fortran"
+        - "Cloudflare Workers"
+  excerpt: 
+    type: textarea
+  avatar: 
+    type: image
   markdown_content:
     type: markdown
     options:
