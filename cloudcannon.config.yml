@@ -361,7 +361,7 @@ _snippets:
               id: right
        
   code_block:
-    snippet: "<CodeBlock lang=[[language]] code={`[[code]]`}/>"
+    snippet: "<CodeBlock lang=[[language]] code={`[[content]]`}/>"
     inline: false
     preview:
       text:
