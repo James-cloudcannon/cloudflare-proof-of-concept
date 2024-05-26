@@ -1,0 +1,51 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Left Right
+  description: Left Right section with reversable order
+  icon: 'chrome_reader_mode'
+  tags:
+    - Text
+    - Links
+    - Reversable
+    - Video
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  content:
+    left: 
+      heading: ""
+      text: ""
+      link: 
+        text: ""
+        url: ""
+    right:
+      video: 
+        url: ""
+  style: 
+    theme: Light
+    reverse_order: false
+  
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  heading: 
+    type: textarea 
+  subheading:
+    type: textarea
+  text: 
+    type: textarea
+  theme:
+    type: select 
+    options:  
+      values: 
+        - Dark 
+        - Light
+  reverse_order:
+    type: switch
+    comment: "Reverse the order of the left and right content"

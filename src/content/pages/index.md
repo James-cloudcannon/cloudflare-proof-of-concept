@@ -144,5 +144,20 @@ content_blocks:
             url: "/cto"
     style: 
       theme: Light 
+  - _bookshop_name: sections/left_right
+    content:
+      left: 
+        heading: Discover the connectivity cloud
+        text: >-
+          Today’s enterprises need to securely connect people, apps and networks everywhere. But how do you tame complexity and maintain control? Cloudflare’s connectivity cloud helps you improve security, consolidate to reduce costs, and move faster than ever.
+        link: 
+          text: Watch webinar
+          url: https://gateway.on24.com/wcc/eh/2153307/lp/4536446/
+      right:
+        video: 
+          url: "https://iframe.cloudflarestream.com/880795275ff16a793449c92b53bd99f2?poster=https%3A%2F%2Fcf-assets.www.cloudflare.com%2Fslt3lc6tev37%2F6MHCosN1XnOOJXTcjG2QDc%2F7fead8bb65a415e2a5dd2d7a16a62cfc%2FCCVideo_Thumbnail.svg&defaultTextTrack=en&letterboxColor=transparent&preload=metadata"
+    style: 
+      theme: Light
+      reverse_order: false 
     
 ---

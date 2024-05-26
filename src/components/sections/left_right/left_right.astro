@@ -1,0 +1,31 @@
+---
+import "./_left_right.scss"
+const { content, style } = Astro.props;
+const { left, right } = content;
+
+const themeClass =
+  style.theme === "Dark"
+    ? "background-color: #000; color: #fff;"
+    : "background-color: #fff; color: #222;";
+---
+
+<div class="left-right" style={themeClass}>
+  <div class="left-right__container">
+    <div class={`left-right__content ${style.reverse_order ? 'left-right__content--reverse' : ''}`}>
+      <div class="left-right__left">
+        <h2 class="left-right__heading">{left.heading}</h2>
+        <div class="left-right__text">{left.text}</div>
+        <a class="left-right__link" href={left.link.url} target="_blank" tabindex="0" role="button">{left.link.text}</a>
+      </div>
+      <div class="left-right__right left-right__video-wrapper" style={`${style.reverse_order ? 'margin-right: 8.33333%' : 'margin-left: 8.33333%'}`}>
+        <iframe 
+          src={right.video.url} 
+          frameborder="0" 
+          allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" 
+          allowfullscreen 
+          style="position: absolute; inset: 0px; height: 100%; width: 100%;">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
