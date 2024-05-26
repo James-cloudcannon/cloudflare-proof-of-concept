@@ -5,7 +5,6 @@ const { lang, code } = Astro.props;
 
 const highlighted = hljs.highlight(code, { language: lang }).value;
 
-console.log(highlighted);
 
 let html = `<pre><code class="hljs language-${lang}">${highlighted}</code></pre>`;
 
