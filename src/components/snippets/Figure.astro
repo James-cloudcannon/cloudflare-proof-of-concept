@@ -1,0 +1,39 @@
+---
+import markdownit from "markdown-it";
+const md = markdownit({ html: true });
+const block = Astro.props;
+---
+
+<figure class="figure-shortcode">
+  <img src={block.image_path} alt={block.image_alt} />
+  {
+    block.caption && (
+      <figcaption
+        class="figure-shortcode-caption"
+        style={`text-align: ${block.text_align || "center"};`}
+      >
+        <p
+          class="figure-shortcode-caption__text"
+          set:html={md.render(block.caption)}
+        />
+      </figcaption>
+    )
+  }
+</figure>
+
+<style>
+  .figure-shortcode {
+    margin: 1em 0;
+  }
+  .figure-shortcode-caption {
+    width: 100% !important;
+    margin: 1em 0 0 !important;
+
+    p {
+      font-size: 80% !important;
+      line-height: 1.6em !important;
+
+      margin: 0 !important;
+    }
+  }
+</style>

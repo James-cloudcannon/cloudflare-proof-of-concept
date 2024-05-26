@@ -297,6 +297,46 @@ generator:
 _snippets_imports:
   mdx: true
 _snippets:
+  figure: 
+    inline: false 
+    template: mdx_component
+    preview:
+      text: 
+        - key: caption
+        - Figure
+    definitions:
+      component_name: Figure
+      named_args:
+        - editor_key: image_path
+          source_key: image_path
+          type: string
+        - editor_key: alt
+          source_key: alt
+          type: string
+        - editor_key: caption
+          source_key: caption
+          type: string
+        - editor_key: text_align
+          source_key: text_align
+          type: string
+    _inputs: 
+      image_path: 
+        type: image 
+      alt: 
+        type: string
+      caption:
+        type: markdown 
+      text_align:
+        type: select
+        options:
+          values:
+            - name: Left
+              id: left
+            - name: Center
+              id: center
+            - name: Right
+              id: right
+       
   code_block:
     snippet: "<CodeBlock language=[[language]]>{`[[inner]]`}</CodeBlock>"
     inline: false
