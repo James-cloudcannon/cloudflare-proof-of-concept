@@ -44,6 +44,7 @@ const posts = await getCollection("blog");
 ---
 
 <Layout {...props}>
+  <progress class="reading-progress" value="0" max="100" aria-label="Reading progress"></progress>
   <main class="blog-post">
     <article class="blog-post__article">
       <h1 class="blog-post__title">{title}</h1>
@@ -127,3 +128,30 @@ const posts = await getCollection("blog");
     })()}
   </main>
 </Layout>
+
+
+<script>
+  window.addEventListener('scroll', () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = window.scrollY;
+    const progress = (scrolled / scrollable) * 100;
+    document.querySelector('.reading-progress').value = progress;
+  });
+</script>
+
+<style>
+  .reading-progress {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 5px;
+    background: #c5d2d9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+progress::-webkit-progress-value {
+  background-color: blue;
+}
+</style>
