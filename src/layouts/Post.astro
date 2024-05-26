@@ -52,7 +52,7 @@ const posts = await getCollection("blog");
       </li>
       <ul class="blog-post__author">
         {author.map((authorName) => (
-          <li class="blog-post__author__item" key={authorName.name}>
+          <li class="blog-post__author__item">
             <a
               href={`/author/${authorName.name.toLowerCase().replace(" ", "-")}`}
               class="blog-post__author__avatar"
@@ -86,7 +86,7 @@ const posts = await getCollection("blog");
     <CloudflareTV />
     <section class="blog-post__tags">
       {tags.map((tag, i) => (
-        <a href={`/tags/${tag.toLowerCase()}`} key={i}>
+        <a href={`/tags/${tag.toLowerCase()}`}>
           {tag[0].toUpperCase() + tag.slice(1)}
         </a>
       ))}
@@ -107,7 +107,10 @@ const posts = await getCollection("blog");
               featured: false,
             },
           };
-        });
+        })
+        .filter((post, index, self) => 
+          index === self.findIndex((p) => p.slug === post.slug)
+        );
 
       return (
         relatedPosts.length > 0 && (
