@@ -2,13 +2,14 @@
 spec:
   structures:
     - content_blocks
-  label: Featured Reviews
-  description: Featured solutions with text, logos and links
+  label: Featured Reports
+  description: Featured Reports with text, logos and links
   icon: 'chrome_reader_mode'
   tags:
     - Text
     - Image
     - Links
+    - Reports
 
 # Defines the structure of this component, as well as the default values
 blueprint:
