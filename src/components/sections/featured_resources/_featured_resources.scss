@@ -2,19 +2,22 @@
     background-color: #fff;
     color: #222;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    margin: 0 auto;
-    max-width: 100%;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   
-    @media screen and (min-width: 62rem) {
-      max-width: 70.438rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
+    &__container {
+      margin: 0 auto;
+      max-width: 100%;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
   
-    @media screen and (min-width: 75rem) {
-      max-width: 70.5rem;
+      @media screen and (min-width: 62rem) {
+        max-width: 70.438rem;
+        padding-left: 0;
+        padding-right: 0;
+      }
+  
+      @media screen and (min-width: 75rem) {
+        max-width: 70.5rem;
+      }
     }
   
     &__header {
@@ -48,9 +51,7 @@
   
     &__resource {
       font-size: 2rem;
-      background-color: white;
       border-radius: 1rem;
-      box-shadow: 0 0 1.875rem -0.875rem rgba(0, 0, 0, 0.25);
       overflow: hidden;
     }
   
@@ -97,7 +98,7 @@
       padding: 0.75rem 1rem;
       font-size: 0.875rem;
       text-decoration: none;
-
+  
       &:hover {
         background-color: #f6821f;
       }

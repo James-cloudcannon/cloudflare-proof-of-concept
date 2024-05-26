@@ -10,22 +10,24 @@ const themeClass =
 ---
 
 <div class="featured-resources" style={themeClass}>
-  <div class="featured-resources__header">
-    <h3 class="featured-resources__heading">{heading}</h3>
-    <p class="featured-resources__subheading">{subheading}</p>
-  </div>
-  
-  <div class="featured-resources__body">
-    {resources && resources.map((resource, index) => (
-      <div class="featured-resources__resource">
-        <div class="featured-resources__resource-container">
-          <div class="featured-resources__resource-title">{resource.heading}</div>
-          <div class="featured-resources__resource-description">{resource.text}</div>
-          <div class="featured-resources__resource-link-container">
-            <a class="featured-resources__resource-link" href={resource.link.url}>{resource.link.text}</a>
-          </div>
-        </div>
+  <div class="featured-resources__container">
+      <div class="featured-resources__header">
+        <h3 class="featured-resources__heading">{heading}</h3>
+        <p class="featured-resources__subheading">{subheading}</p>
       </div>
-    ))}
+      
+      <div class="featured-resources__body">
+        {resources && resources.map((resource, index) => (
+          <div class="featured-resources__resource" style={`box-shadow: 0 0 1.875rem -0.875rem ${style.theme === "Light" ? "rgba(0,0,0,0.25)" : "rgba(255,255,255,0.5)"};`}>
+            <div class="featured-resources__resource-container">
+              <div class="featured-resources__resource-title">{resource.heading}</div>
+              <div class="featured-resources__resource-description">{resource.text}</div>
+              <div class="featured-resources__resource-link-container">
+                <a class="featured-resources__resource-link" href={resource.link.url}>{resource.link.text}</a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
   </div>
 </div>
