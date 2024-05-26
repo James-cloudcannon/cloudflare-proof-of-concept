@@ -74,6 +74,16 @@ This is all packaged in the [Fortiche](https://github.com/cloudflare/fortiche) D
 
 add.f90:
 
+
+```stylus
+{`SUBROUTINE add(a, b, res)
+    INTEGER, INTENT(IN) :: a, b
+    INTEGER, INTENT(OUT) :: res
+
+    res = a + b
+END`}
+````
+
 Here we defined a subroutine called add that takes `a` and `b`, sums them together and places the result in `res`.
 
 Compile with [Fortiche](https://github.com/cloudflare/fortiche):
