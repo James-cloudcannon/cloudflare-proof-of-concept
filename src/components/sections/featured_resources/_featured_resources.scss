@@ -14,6 +14,12 @@
         padding-left: 0;
         padding-right: 0;
       }
+
+      @media screen and (min-width: 992px) and (max-width: 1191px) {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+      }
+  
   
       @media screen and (min-width: 75rem) {
         max-width: 70.5rem;
