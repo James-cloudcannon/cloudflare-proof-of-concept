@@ -12,9 +12,6 @@ export default function PostSummary({ post }) {
     day: '2-digit',
   });
 
-  // log any post with post.data.featured === true
-  console.log(post.data.featured);
-
   return (
     <>
       {post.data.featured ? (

@@ -2,7 +2,6 @@ import PostSummary from './summary';
 import './_blog-list.scss';
 
 export default function BlogList({ posts }) {
-  console.log(posts.data)
   if (posts.length > 0) {
     return (
         <div className="blog-list">
