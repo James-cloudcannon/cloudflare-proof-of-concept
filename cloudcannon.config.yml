@@ -297,6 +297,27 @@ generator:
 _snippets_imports:
   mdx: true
 _snippets:
+  iframe: 
+    inline: false
+    template: mdx_component
+    preview:
+      text: 
+        - key: src 
+        - 'Iframe'
+    definitions:
+      component_name: SnippetsIframe
+      named_args:
+        - editor_key: src
+          source_key: src
+          type: string
+        - editor_key: height 
+          source_key: height
+          type: number
+    _inputs: 
+      src: 
+        type: url 
+      height: 
+        type: number
   figure: 
     inline: false 
     template: mdx_component
