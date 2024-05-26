@@ -1,7 +1,7 @@
 {
-  "site_title": "Astro Starter",
-  "description": "A starter template for Astro, built by Bookshop components - for CloudCannon CMS.",
-  "twitter_site": "",
-  "image": "/images/astro-logo-light-gradient.png",
-  "image_alt": "Astro logo"
+  "site_title": "Cloudflare",
+  "description": "Make employees, applications and networks faster and more secure everywhere, while reducing complexity and cost.",
+  "twitter_site": "https://x.com/Cloudflare",
+  "image": "https://cf-assets.www.cloudflare.com/slt3lc6tev37/2FNnxFZOBEha1W2MhF44EN/e9438de558c983ccce8129ddc20e1b8b/CF_MetaImage_1200x628.png",
+  "image_alt": "Cloudflare logo"
 }
