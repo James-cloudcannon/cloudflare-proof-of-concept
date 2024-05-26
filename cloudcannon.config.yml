@@ -1,5 +1,4 @@
 paths:
-  source: /
   data: data
   static: 'public'
   uploads: public/images
