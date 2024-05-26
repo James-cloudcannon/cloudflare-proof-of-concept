@@ -85,15 +85,6 @@ collections_config:
       author:
         options:
           empty_type: string
-      tags:
-        type: array
-        options:
-          allow_create: true
-          empty_type: array
-      tags[*]:
-        type: text
-        options:
-          empty_type: string
   data:
     path: data
     disable_add: true
