@@ -270,20 +270,4 @@ content_blocks:
         https://cf-assets.www.cloudflare.com/slt3lc6tev37/6wvLylL1UDvEfh7N5WBd32/44ff9093b6aa1feb33d12d020ce756df/Generic_Orange_Background.jpeg
     style:
       theme: Light
-  - _bookshop_name: sections/featured_reports
-    content:
-      heading: test
-      reports:
-        - heading: test
-          video:
-            video_path: ''
-          image:
-            image_path: /src/assets/images/featured-image-5.jpg
-            image_alt: ''
-          text: test123
-          link:
-            text: test
-            url: '123123'
-    style:
-      theme: Light
 ---
