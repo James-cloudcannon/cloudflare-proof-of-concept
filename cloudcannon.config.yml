@@ -448,7 +448,7 @@ _snippets:
               id: right
         cascade: true
   code_block:
-    snippet: <CodeBlock lang=[[language]] code={[[code]]}/>
+    snippet: <CodeBlock lang=[[language]] [[code_wrapper]]/>
     inline: false
     preview:
       text:
@@ -468,6 +468,13 @@ _snippets:
             ref: mdx_format
           style:
             output: inline
+      code_wrapper:
+        parser: wrapper
+        snippet: code={[[code]]}
+        options:
+          style:
+            output: inline
+
       code:
         parser: argument
         options:
@@ -476,9 +483,7 @@ _snippets:
             type: string
           format:
             string_boundary: 
-              - "`"
-            special_characters:
-              - "$"
+              - '"'
     _inputs:
       content:
         type: code
