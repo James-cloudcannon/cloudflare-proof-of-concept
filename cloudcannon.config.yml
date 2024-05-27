@@ -32,6 +32,7 @@ collections_config:
         icon: notes
   posts:
     path: src/content/blog
+    parser: front-matter
     output: true
     url: /blog/[full_slug]/
     icon: notes
