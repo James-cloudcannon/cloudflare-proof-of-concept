@@ -14,8 +14,8 @@ const block = Astro.props;
       >
         <p
           class="figure-shortcode-caption__text"
-          set:html={md.render(block.caption)}
-        />
+          >
+          {block.caption}</p>
       </figcaption>
     )
   }

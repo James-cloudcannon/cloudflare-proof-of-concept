@@ -433,7 +433,7 @@ _snippets:
         type: text
         cascade: true
       caption:
-        type: markdown
+        type: textarea
         cascade: true
       text_align:
         type: select
