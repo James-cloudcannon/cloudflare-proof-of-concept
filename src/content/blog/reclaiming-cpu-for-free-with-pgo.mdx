@@ -54,10 +54,9 @@ In the end, we decided that the best samples would be from those datacenters exp
 
 Concretely, we can get a list of high CPU servers by querying our [Thanos](https://thanos.io/) infrastructure:
 
-<CodeBlock lang="perl" code={"num_profiles=\"1000\"
-
-# Fetch the top n CPU users for wshim across the edge using Thanos.
-cloudflared access curl \"https://thanos/api/v1/query?query=topk%28${num_profiles}%2Cinstance%3Acontainer_cpu_time_seconds_total%3Arate2m%7Bapp_name%3D%22wshim.service%22%7D%29&dedup=true&partial_response=true\" --compressed | jq '.data.result[].metric.instance' -r > \"${instances_file}\""}/>
+<CodeBlock lang="perl" code={"
+${instances_file}
+"}/>
 
 ```perl
 num_profiles="1000"
