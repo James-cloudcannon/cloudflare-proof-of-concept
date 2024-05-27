@@ -474,7 +474,6 @@ _snippets:
         options:
           style:
             output: inline
-
       code:
         parser: argument
         options:
