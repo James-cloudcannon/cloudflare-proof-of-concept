@@ -448,7 +448,7 @@ _snippets:
               id: right
         cascade: true
   code_block:
-    snippet: <CodeBlock lang=[[language]] code={`[[code]]`}/>
+    snippet: <CodeBlock lang=[[language]] code={[[code]]}/>
     inline: false
     preview:
       text:
@@ -469,13 +469,16 @@ _snippets:
           style:
             output: inline
       code:
-        parser: content
+        parser: argument
         options:
-          editor_key: content
-          allow_nested: false
-          trim_text: true
-          forbidden_tokens:
-            - '```'
+          model:
+            editor_key: content
+            type: string
+          format:
+            string_boundary: 
+              - "`"
+            special_characters:
+              - "$"
     _inputs:
       content:
         type: code
