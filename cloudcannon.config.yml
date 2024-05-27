@@ -470,8 +470,8 @@ _snippets:
             output: inline
       code_wrapper:
         parser: wrapper
-        snippet: code={[[code]]}
         options:
+          snippet: code={[[code]]}
           style:
             output: inline
       code:
