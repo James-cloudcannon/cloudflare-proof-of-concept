@@ -1,5 +1,5 @@
 paths:
-  uploads: public/uploads
+  uploads: public/images
   static: public
   data: data
   assets: public
