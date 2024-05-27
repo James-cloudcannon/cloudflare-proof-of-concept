@@ -450,6 +450,35 @@ _snippets:
   code_block:
     snippet: <CodeBlock lang=[[language]] [[code_wrapper]]/>
     inline: false
+    alternate_formats: 
+      - snippet: <CodeBlock lang=[[language]] code={`[[code]]`}/>
+        inline: false
+        preview:
+          text:
+            - template: CodeBlock ({language})
+            - CodeBlock
+          subtext:
+            - key: content
+          icon: code
+        params:
+          language:
+            parser: argument
+            options:
+              model:
+                editor_key: language
+                type: string
+              format:
+                ref: mdx_format
+              style:
+                output: inline
+          code:
+            parser: content
+            options:
+              editor_key: content
+              allow_nested: false
+              trim_text: true
+              forbidden_tokens:
+                - '```'
     preview:
       text:
         - template: CodeBlock ({language})
