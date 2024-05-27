@@ -170,14 +170,6 @@ _inputs:
       underline: true
       undo: true
     cascade: true
-  image_path:
-    type: image
-    options:
-      paths:
-        uploads: src/assets/images
-        static: .
-    comment: The path to the source file of the image to be optimized.
-    cascade: true
   alt_text:
     type: textarea
     label: Image Alt Text
