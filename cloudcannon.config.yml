@@ -407,7 +407,6 @@ _snippets:
     template: mdx_component
     preview:
       text:
-        - key: caption
         - Figure
       icon: image
     definitions:
