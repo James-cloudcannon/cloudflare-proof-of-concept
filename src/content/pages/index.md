@@ -86,8 +86,7 @@ content_blocks:
         everywhere.
       features:
         - heading: SASE and SSE services
-          image: >-
-            https://cf-assets.www.cloudflare.com/slt3lc6tev37/2pqDYkVg8K6GqUXO2x7Izl/2d2a67e1288dbd9fc5eadcd48b56333f/SSE_SASE_01.svg
+          image: /images/sse-sase-01.svg
           text: >-
             Connect and secure your employees, contractors, devices, networks,
             apps, and data everywhere they live.
@@ -95,8 +94,7 @@ content_blocks:
             - text: Explore SASE / SSE
               url: https://www.cloudflare.com/en-gb/zero-trust/
         - heading: App and infrastructure services
-          image: >-
-            https://cf-assets.www.cloudflare.com/slt3lc6tev37/6PDJxm9gpmdAMR1JSTQRSl/1ad54dc5651ec6d7edd26c3785766bd5/Apps_Infrastructure.svg_01.svg
+          image: /images/apps-infrastructure-svg-01.svg
           text: >-
             Give your digital products and services top-notch security,
             reliability, and performance for customers everywhere.
