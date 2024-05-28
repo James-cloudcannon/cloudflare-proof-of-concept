@@ -76,6 +76,7 @@ const { heading, subheading, buttons, features, background_image, CTA_button } =
         href={CTA_button?.link}
         tabindex="0"
         role="button"
+        style={`--background-color: ${CTA_button.style.background_color}; --text-color: ${CTA_button.style.text_color}; --border-color: ${CTA_button.style.border_color}; --hover-background-color: ${CTA_button.style.hover_background_color};`}
       >
         {CTA_button?.text}
       </a>
