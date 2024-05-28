@@ -54,7 +54,7 @@ In the end, we decided that the best samples would be from those datacenters exp
 
 Concretely, we can get a list of high CPU servers by querying our [Thanos](https://thanos.io/) infrastructure:
 
-<CodeBlock lang="perl" code={"num_profiles=\"1000\"nn# Fetch the top n CPU users for wshim across the edge using Thanos.ncloudflared access curl \"https://thanos/api/v1/query?query=topk%28${num_profiles}%2Cinstance%3Acontainer_cpu_time_seconds_total%3Arate2m%7Bapp_name%3D%22wshim.service%22%7D%29&dedup=true&partial_response=true\" --compressed | jq '.data.result[].metric.instance' -r > \"${instances_file}\""}/>
+<CodeBlock lang="perl" code={"num_profiles=\"1000\"\n\n# Fetch the top n CPU users for wshim across the edge using Thanos.\ncloudflared access curl \"https://thanos/api/v1/query?query=topk%28${num_profiles}%2Cinstance%3Acontainer_cpu_time_seconds_total%3Arate2m%7Bapp_name%3D%22wshim.service%22%7D%29&dedup=true&partial_response=true\" --compressed | jq '.data.result[].metric.instance' -r > \"${instances_file}\""}/>
 
 Go makes actually fetching CPU profiles trivial with [pprof](https://pkg.go.dev/net/http/pprof). In order for our engineers to debug their systems in production, we provide a method to easily retrieve production profiles that we can use here. Wshim provides a pprof interface that we can use to retrieve profiles, and we can collect these again with bash:
 
