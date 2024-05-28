@@ -120,10 +120,10 @@ content_blocks:
           text: Get in touch
           link: https://www.cloudflare.com/en-gb/plans/enterprise/contact/
           style:
-            background_color: ''
-            text_color: ''
-            border_color: ''
-            hover_background_color: ''
+            background_color: '#FF6633'
+            text_color: '#000000'
+            border_color: '#FF6633'
+            hover_background_color: '#FFE0D6'
         heading: Want to speak with an expert?
     style:
       theme: Light
@@ -193,6 +193,11 @@ content_blocks:
           link:
             text: Explore
             url: /ciso
+            style:
+              background_color: '#FF6633'
+              text_color: '#000000'
+              border_color: '#FF6633'
+              hover_background_color: '#FFE0D6'
         - heading: For CIOs
           text: >-
             Accelerate digital transformation for better efficiency and faster
@@ -200,6 +205,11 @@ content_blocks:
           link:
             text: Explore
             url: /cio
+            style:
+              background_color: '#FF6633'
+              text_color: '#000000'
+              border_color: '#FF6633'
+              hover_background_color: '#FFE0D6'
         - heading: For CTOs
           text: >-
             Deliver better software faster while fostering a culture of
@@ -207,6 +217,11 @@ content_blocks:
           link:
             text: Explore
             url: /cto
+            style:
+              background_color: '#FF6633'
+              text_color: '#000000'
+              border_color: '#FF6633'
+              hover_background_color: '#FFE0D6'
     style:
       theme: Light
   - _bookshop_name: sections/left_right
@@ -221,6 +236,11 @@ content_blocks:
         link:
           text: Watch webinar
           url: https://gateway.on24.com/wcc/eh/2153307/lp/4536446/
+          style:
+            background_color: '#FF6633'
+            text_color: '#000000'
+            border_color: '#FF6633'
+            hover_background_color: '#FFE0D6'
       right:
         video:
           url: >-
@@ -286,6 +306,11 @@ content_blocks:
       link:
         text: Get in touch
         url: https://www.cloudflare.com/en-gb/plans/enterprise/contact/
+        style:
+          background_color: '#FF6633'
+          text_color: '#000000'
+          border_color: '#FF6633'
+          hover_background_color: '#FFE0D6'
       background_image: >-
         https://cf-assets.www.cloudflare.com/slt3lc6tev37/6wvLylL1UDvEfh7N5WBd32/44ff9093b6aa1feb33d12d020ce756df/Generic_Orange_Background.jpeg
     style:
