@@ -67,6 +67,7 @@ const themeClass =  style.theme === "Dark" ? "background-color: #000; color: #ff
                 tabindex="0"
                 role="button"
                 aria-label={CTA.button.text}
+                style={`--background-color: ${CTA.button.style?.background_color}; --text-color: ${CTA.button.style?.text_color}; --border-color: ${CTA.button.style?.border_color}; --hover-background-color: ${CTA.button.style?.hover_background_color};`}
               >
                 {CTA.button.text}
               </a>

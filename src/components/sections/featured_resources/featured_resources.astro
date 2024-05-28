@@ -23,7 +23,9 @@ const themeClass =
               <div class="featured-resources__resource-title">{resource.heading}</div>
               <div class="featured-resources__resource-description">{resource.text}</div>
               <div class="featured-resources__resource-link-container">
-                <a class="featured-resources__resource-link" href={resource.link.url}>{resource.link.text}</a>
+                <a class="featured-resources__resource-link" href={resource.link.url} 
+                    style={`--background-color: ${resource.link.style?.background_color}; --text-color: ${resource.link.style?.text_color}; --border-color: ${resource.link.style?.border_color}; --hover-background-color: ${resource.link.style?.hover_background_color};`}
+                >{resource.link.text}</a>
               </div>
             </div>
           </div>

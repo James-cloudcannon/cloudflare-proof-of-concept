@@ -21,7 +21,7 @@ const { heading, subheading, buttons, features, background_image, CTA_button } =
               href={button.url}
               tabindex="0"
               role="button"
-              style={`--background-color: ${button.style.background_color}; --text-color: ${button.style.text_color}; --border-color: ${button.style.border_color}; --hover-background-color: ${button.style.hover_background_color};`}
+              style={`--background-color: ${button.style?.background_color}; --text-color: ${button.style?.text_color}; --border-color: ${button.style?.border_color}; --hover-background-color: ${button.style?.hover_background_color};`}
               data-tracking-label={`sign_up-[${button.url}]`}
             >
               {button.text}

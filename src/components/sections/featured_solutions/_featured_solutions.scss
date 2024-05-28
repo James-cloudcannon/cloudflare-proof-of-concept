@@ -223,6 +223,10 @@
     }
 
     &__cta-button {
+        --text-color: inherit;
+        --background-color: #f63;
+        --border-color: #f63;
+        --hover-background-color: #f6821f;
         align-items: center;
         border-radius: 8px;
         display: flex;
@@ -231,14 +235,16 @@
         font-weight: 500;
         letter-spacing: -0.32px;
         width: 100%;
-        background: #f63;
+        background: var(--background-color);
+        color: var(--text-color);
+        border-color: var(--border-color);
         padding: 12px 40px;
         text-align: center;
         font-size: 0.875rem;
         text-decoration: none;
 
         &:hover {
-            background: #f6821f;
+            background: var(--hover-background-color);
         }
 
         @media screen and (min-width: 576px) {

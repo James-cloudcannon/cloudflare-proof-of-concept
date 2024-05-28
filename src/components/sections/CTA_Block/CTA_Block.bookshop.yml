@@ -18,6 +18,11 @@ blueprint:
     link: 
       text: ""
       url: ""
+      style: 
+        background_color: ""
+        text_color: ""
+        border_color: ""
+        hover_background_color: ""
     background_image: ""
   style: 
     theme: Light
@@ -37,3 +42,35 @@ _inputs:
       values: 
         - Dark 
         - Light
+  background_color:
+    type: select 
+    options: 
+      values: data.colors 
+      value_key: value 
+      preview: 
+        text: 
+          - key: name 
+  text_color:
+    type: select 
+    options: 
+      values: data.colors 
+      value_key: value 
+      preview: 
+        text: 
+          - key: name
+  border_color:
+    type: select 
+    options: 
+      values: data.colors 
+      value_key: value 
+      preview: 
+        text: 
+          - key: name
+  hover_background_color:
+    type: select 
+    options: 
+      values: data.colors 
+      value_key: value 
+      preview: 
+        text: 
+          - key: name

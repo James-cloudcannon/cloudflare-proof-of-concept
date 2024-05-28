@@ -22,6 +22,7 @@ const themeClass =
               class="cta-block__link" 
               tabindex="0" 
               role="button" 
+              style={`--background-color: ${link.style?.background_color}; --text-color: ${link.style?.style.text_color}; --border-color: ${link.style?.style.border_color}; --hover-background-color: ${link.style?.style.hover_background_color};`}
             >
               {link.text}
             </a>

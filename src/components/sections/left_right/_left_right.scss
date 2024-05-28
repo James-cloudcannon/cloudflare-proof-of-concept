@@ -84,10 +84,15 @@
     }
   
     &__link {
+      --text-color: inherit;
+      --background-color: #f63;
+      --border-color: #f63;
+      --hover-background-color: #f6821f;
       display: inline-block;
       padding: 0.75rem 1.5rem;
-      background-color: #f63;
-      color: #000;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      border-color: var(--border-color);
       text-align: center;
       font-size: 1rem;
       font-weight: 500;
@@ -96,7 +101,7 @@
       transition: background-color 0.3s;
   
       &:hover {
-        background-color: #f6821f;
+        background-color: var(--hover-background-color);
       }
   
       @media(min-width: 992px) {
