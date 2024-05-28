@@ -21,17 +21,17 @@ content_blocks:
         - text: Learn more
           link: /en-gb/connectivity-cloud/
           style:
-            background_color: ""
-            text_color: ""
-            border_color: ""
-            hover_background_color: ""
+            background_color: '#FF6633'
+            text_color: '#000000'
+            border_color: Orange
+            hover_background_color: '#f6821f'
         - text: Start for free
           link: https://dash.cloudflare.com/sign-up
           style:
-            background_color: ""
-            text_color: ""
-            border_color: ""
-            hover_background_color: ""
+            background_color: '#ffffff'
+            text_color: '#000000'
+            border_color: '#FF6633'
+            hover_background_color: '#FFE0D6'
       features:
         image:
           image_path: >-
@@ -72,10 +72,10 @@ content_blocks:
         text: Contact sales
         link: https://www.cloudflare.com/en-gb/plans/enterprise/contact/
         style:
-          background_color: ""
-          text_color: ""
-          border_color: ""
-          hover_background_color: ""
+          background_color: '#FF6633'
+          text_color: '#000000'
+          border_color: '#FF6633'
+          hover_background_color: '#f6821f'
     style:
       theme: 'background-color: #ffffff; color: #222;'
   - _bookshop_name: sections/featured_solutions
@@ -120,12 +120,11 @@ content_blocks:
           text: Get in touch
           link: https://www.cloudflare.com/en-gb/plans/enterprise/contact/
           style:
-            background_color: ""
-            text_color: ""
-            border_color: ""
-            hover_background_color: ""
+            background_color: ''
+            text_color: ''
+            border_color: ''
+            hover_background_color: ''
         heading: Want to speak with an expert?
-
     style:
       theme: Light
   - _bookshop_name: sections/featured_reports
