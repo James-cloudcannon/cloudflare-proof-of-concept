@@ -34,8 +34,7 @@ content_blocks:
             hover_background_color: '#FFE0D6'
       features:
         image:
-          image_path: >-
-            https://cf-assets.www.cloudflare.com/slt3lc6tev37/76x52jIsr93tqZq0h3HCFW/33a7575a9dc880e0a45c0f69fcbcfc8f/cc-diagram-orange-2024.png
+          image_path: /images/cc-diagram-orange-2024.png
           image_alt: >-
             Connectivity cloud diagram. This diagram has a cloud in the middle
             labeled connectivity cloud. Around the cloud is a circle with icons
