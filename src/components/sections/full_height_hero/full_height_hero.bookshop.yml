@@ -18,6 +18,11 @@ blueprint:
     buttons: 
       - text: ""
         link: ""
+        style:
+          background_color: ""
+          text_color: ""
+          border_color: ""
+          hover_background_color: ""
     features:
       image: 
         image_path: ""
@@ -27,6 +32,14 @@ blueprint:
           icon: ""
           text: ""
     background_image: ""
+    CTA_button:
+      text: ""
+      link: ""
+      style:
+          background_color: ""
+          text_color: ""
+          border_color: ""
+          hover_background_color: ""
   style: 
     theme: ""
   
@@ -57,4 +70,35 @@ _inputs:
           name: "Light"
         - id: "background-color: #000; color: #fff;"
           name: "Dark"
- 
+  background_color:
+    type: select 
+    options: 
+      values: data.colors 
+      value_key: value 
+      preview: 
+        text: 
+          - key: name 
+  text_color:
+    type: select 
+    options: 
+      values: data.colors 
+      value_key: value 
+      preview: 
+        text: 
+          - key: name
+  border_color:
+    type: select 
+    options: 
+      values: data.colors 
+      value_key: value 
+      preview: 
+        text: 
+          - key: name
+  hover_background_color:
+    type: select 
+    options: 
+      values: data.colors 
+      value_key: value 
+      preview: 
+        text: 
+          - key: name

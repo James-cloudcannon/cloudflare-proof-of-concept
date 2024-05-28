@@ -20,8 +20,18 @@ content_blocks:
       buttons:
         - text: Learn more
           link: /en-gb/connectivity-cloud/
+          style:
+            background_color: ""
+            text_color: ""
+            border_color: ""
+            hover_background_color: ""
         - text: Start for free
           link: https://dash.cloudflare.com/sign-up
+          style:
+            background_color: ""
+            text_color: ""
+            border_color: ""
+            hover_background_color: ""
       features:
         image:
           image_path: >-
@@ -61,6 +71,11 @@ content_blocks:
       CTA_button:
         text: Contact sales
         link: https://www.cloudflare.com/en-gb/plans/enterprise/contact/
+        style:
+          background_color: ""
+          text_color: ""
+          border_color: ""
+          hover_background_color: ""
     style:
       theme: 'background-color: #ffffff; color: #222;'
   - _bookshop_name: sections/featured_solutions
@@ -104,7 +119,13 @@ content_blocks:
         button:
           text: Get in touch
           link: https://www.cloudflare.com/en-gb/plans/enterprise/contact/
+          style:
+            background_color: ""
+            text_color: ""
+            border_color: ""
+            hover_background_color: ""
         heading: Want to speak with an expert?
+
     style:
       theme: Light
   - _bookshop_name: sections/featured_reports
