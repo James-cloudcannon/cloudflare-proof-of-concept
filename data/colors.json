@@ -20,6 +20,8 @@
   {"name": "Light Grey" , "value": "#c5d2d9" },
   {"name": "White Grey" , "value": "#e5eff5" },
   {"name": "Pink" , "value": "#fa3a57" },
-  {"name": "Brown" , "value": "#a3821a" }
+  {"name": "Brown", "value": "#a3821a" },
+  {"name": "Peach Schnapps", "value": "#FFE0D6"},
+  {"name": "Ecstasy", "value": "#f6821f"}
 ]
 
