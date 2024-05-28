@@ -15,7 +15,7 @@ seo:
 content_blocks:
   - _bookshop_name: sections/full_height_hero
     content:
-      heading: Connect, protect and build everywhere
+      heading: Live render on the page
       subheading: Put the connectivity cloud to work for you.
       buttons:
         - text: Learn more
