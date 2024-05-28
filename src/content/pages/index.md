@@ -104,8 +104,7 @@ content_blocks:
             - text: Explore infrastructure
               url: https://www.cloudflare.com/en-gb/network-services/
         - heading: Developer services
-          image: >-
-            https://cf-assets.www.cloudflare.com/slt3lc6tev37/2pqDYkVg8K6GqUXO2x7Izl/2d2a67e1288dbd9fc5eadcd48b56333f/SSE_SASE_01.svg
+          image: /images/sse-sase-01.svg
           text: >-
             Easily build and deploy full-stack applications everywhere, thanks
             to integrated compute, storage, and networking.
