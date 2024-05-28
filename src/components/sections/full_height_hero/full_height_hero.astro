@@ -16,9 +16,7 @@ const { heading, subheading, buttons, features, background_image, CTA_button } =
       </div>
       {buttons?.length > 0 && (
         <div class="full-height-hero__container__content__buttons">
-          {buttons.map(button => {
-            console.log(button)
-            return (
+          {buttons.map(button => (
             <a
               href={button.url}
               tabindex="0"
@@ -28,7 +26,7 @@ const { heading, subheading, buttons, features, background_image, CTA_button } =
             >
               {button.text}
             </a>
-          )})}
+          ))}
         </div>
       )}
     </div>
